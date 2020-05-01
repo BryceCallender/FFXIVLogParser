@@ -1,0 +1,172 @@
+00 - Log Line
+	DateTime
+	??
+	??
+	Message
+	??
+
+01 - Zone Change
+	DateTime
+	Zone ID
+	Zone Name
+	??
+
+02 - Primary Player change?
+	DateTime
+	Player id
+	Player name
+	??
+
+03 - Adding Combatant
+	DateTime
+	Id
+	name
+	job id
+	level
+	ownerid
+	world id
+	b npc name id
+	n npc id
+	player current hp
+	player max hp
+	player current mp
+	player max mp
+	player current tp
+	player max mp
+	player x
+	player y
+	player z
+	player heading
+
+04 - Remove Combatant
+	Same as above?
+
+05 - Add Buff
+
+
+11 - Party List
+	DateTime
+	Party Size
+	ID of each member in party size
+	??
+
+12 - Player stats
+	DateTime
+	Job Id
+	Str
+	Dex
+	Vitality
+	Intelligence
+	Mind
+	Piety
+	Attack
+	Direct hit
+	crit
+	attack magic potency
+	heal magic potency
+	determination
+	skill speed
+	spell speed
+	some random 0
+	tenacity
+
+13 - Combatant HP
+	? Didnt find
+
+14 - Parsed party memeber
+	? didnt find
+
+20 - Network Started Casting
+	DateTime
+	Player id
+	Player name
+	Skill id
+	Skill name
+	Target id
+	target name
+	cast duration
+	?
+
+21 - Network Ability
+	DateTime
+	Player id
+	Player name
+	skill id
+	skill name
+	target id
+	target name
+	player current hp
+	player max hp
+	player current mp
+	player max mp
+	player current tp
+	player max mp
+	player x
+	player y
+	player z
+	player heading
+	target current hp 
+	target max hp
+	target current mp
+	target max mp
+	target current tp
+	target max tp
+	target x
+	target y
+	target z
+	target heading
+	?
+	?
+	?
+	?
+	?
+	?
+	?
+	?
+
+22 - Network AOE Ability
+	same as above i think
+
+23 - Cancel Ability
+	DateTime
+	Player id
+	Player name
+	skill id
+	skill name
+	cancelled
+	interrupted
+
+24 - Network DoT
+	DateTime
+	target id
+	target name
+	damage or healing
+	buff id
+	amount of damage
+	target current hp 
+	target max hp
+	target current mp
+	target max mp
+	target current tp
+	target max tp
+	target x
+	target y
+	target z
+	target heading
+
+25 - Network Death
+	DateTime
+	player id
+	player name
+	target id
+	target name
+
+249 - Settings
+	DateTime
+	Buncha values comma seperated
+	??
+
+253 - Version
+	DateTime
+	Plugin Version
+	???
