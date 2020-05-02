@@ -11,7 +11,7 @@
 	Zone Name
 	??
 
-02 - Primary Player change?
+02 - Primary Player change
 	DateTime
 	Player id
 	Player name
@@ -32,7 +32,7 @@
 	player current mp
 	player max mp
 	player current tp
-	player max mp
+	player max tp
 	player x
 	player y
 	player z
@@ -42,7 +42,7 @@
 	Same as above?
 
 05 - Add Buff
-
+	? dont have
 
 11 - Party List
 	DateTime
@@ -67,7 +67,7 @@
 	determination
 	skill speed
 	spell speed
-	some random 0
+	0
 	tenacity
 
 13 - Combatant HP
@@ -100,7 +100,7 @@
 	player current mp
 	player max mp
 	player current tp
-	player max mp
+	player max tp
 	player x
 	player y
 	player z
@@ -161,6 +161,193 @@
 	target id
 	target name
 
+26 - Network Buff
+	DateTime
+	skill id
+	skill name
+	Duration
+	player id
+	player name
+	target id
+	target name
+	buff extra
+	target max hp
+	target max mp
+	?
+	?
+
+27 - Network Target icon
+	DateTime
+	Player id
+	Player name
+	?
+	?
+	?
+	?
+	?
+	?
+
+29 - Network Target Marker
+	DateTime
+	Marker event => Add 1 | Update 2 | Delete 3
+	marker id
+	target id
+	player id
+
+30 - Network Buff remove
+	DateTime
+	buff id
+	buff name
+	duration
+	player id
+	player name
+	target id
+	target name
+	buff extra 
+	target max hp
+	target max mp
+
+
+31|2020-04-25T23:05:15.4530000-07:00|106C6619|753017|F00|00|00|e4a7f3bf8e3f327898b23fed37a6293f
+31 - Network Gauge
+	DateTime
+	?
+	?
+	?
+	?
+	?
+	?
+
+
+32 - Network World
+	? not found in log
+
+33 - Network 6D
+	DateTime
+	?
+	?
+	?
+	?
+	?
+	?
+	?
+
+34 - Network Name toggle
+	DateTime
+
+35 - Network Tether 
+	DateTime
+	target id
+	target name
+	player id
+	player name
+	? (all X4 output)
+	?
+	?
+	?
+	?
+	?
+
+
+36 - Network Limit break
+	DateTime
+	limitBreak (X4 string output) (numerical representation of the limit break bar)
+	maxLB (byte data to string) (1 2 or 3. Shows what is available to be used during encounter)
+
+
+37 - Network Effect Result
+	DateTime
+	player id
+	player name
+	sequence (X8 string output)
+	current hp 
+	max hp
+	current mp
+	max mp
+	damage shield
+	0
+	x
+	y
+	z
+	heading
+	Complex data list (need to figure out)  **** Iterates over a list of data and if any 1 of 4 indices (checks 4 at a time) contain a non zero value then log all 4 of em ****
+
+	numArray is the data list passed in 
+		[0] => unknown 3
+		[1] => 0
+		[2] => unknown 6
+		[3] => effect count  => uint => 32 bit max
+
+		sequence of 4's
+			[0] => Effect id + (unknown1 << 6) + (effect index << 24) => stored as uint so all packed
+			[1] => uint unknown 2 + uint (unknown 3 << 16)
+			[2] => duration in bytes to uint32 => duration is a float converted to bytes then to an uint so we need to go to uint -> float
+			[3] => actor id => player id
+
+	Effect result will trigger a Network buff to come right after it (not 100% sure, but from source code it looks like it)
+
+	for (int index = 0; index < (int) num1; ++index)
+      {
+        numArray[4 + index * 4] = (uint) ((int) effects[index].EffectID + ((int) effects[index].unknown1 << 6) + ((int) effects[index].EffectIndex << 24));
+        numArray[4 + index * 4 + 1] = (uint) effects[index].unknown2 + ((uint) effects[index].unknown3 << 16);
+        numArray[4 + index * 4 + 2] = BitConverter.ToUInt32(BitConverter.GetBytes(effects[index].duration), 0);
+        numArray[4 + index * 4 + 3] = effects[index].SourceActorID;
+      }
+
+
+38 - Network Status List (Up to 30 status effect and 60 for bosses)
+	DateTime
+	target id
+	target name (can be empty)
+	job levels (X8 string output) (job id + level 1 + level 2 + level 3)
+	current hp
+	max hp 
+	current mp
+	max mp
+	damage shield
+	0
+	x
+	y
+	z
+	heading
+	Complex status list (need to figure out)  **** Iterates over and will output 3 at a time as long as index * 3 is less than num which is the furthest non 0 number in the list ****
+
+
+	Effect id
+	Other info 
+	duration
+	player id
+
+	0|0|0|0A016D|41F00000|E0000000|0A0386|41F00000|E0000000|28E80030|43C39CB3|106C6619||8f647e60b07e9cd3c1702b8576396450
+
+	for (byte index = 0; index < (byte) 30; ++index)
+      {
+        if (effects[index].EffectID != (ushort) 0)
+        {
+          numArray[3 + (int) index * 3] = (uint) effects[index].EffectID + ((uint) effects[index].OtherInfo << 16);
+          numArray[3 + (int) index * 3 + 1] = BitConverter.ToUInt32(BitConverter.GetBytes(effects[index].Duration), 0);
+          numArray[3 + (int) index * 3 + 2] = effects[index].ActorID;
+        }
+      }
+
+	 
+39 - Network Update hp
+	DateTime
+	player id
+	player name
+	current hp
+	max hp 
+	current mp
+	max mp
+	current tp
+	max tp
+	x
+	y
+	z
+	heading
+	empty
+	?
+
 249 - Settings
 	DateTime
 	Buncha values comma seperated
@@ -169,4 +356,4 @@
 253 - Version
 	DateTime
 	Plugin Version
-	???
+	?

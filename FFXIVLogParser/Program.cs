@@ -27,12 +27,22 @@ namespace FFXIVLogParser
             using (StreamReader streamReader = File.OpenText(path))
             {
                 string line;
-                while((line = streamReader.ReadLine()) != null)
-                {
-                    parser.ParseLine(line);
 
-                    //int.TryParse(contents[0], out int logMessageType);
-                    //Console.WriteLine((LogMessageType)logMessageType);
+                using (StreamWriter streamWriter = File.CreateText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Path.GetFileNameWithoutExtension(path) + ".txt")))
+                {
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        parser.ParseLine(line);
+
+
+                        int.TryParse(line.Split('|')[0], out int logMessageType);
+                        streamWriter.WriteLine((LogMessageType)logMessageType);
+
+                        if((LogMessageType)logMessageType == LogMessageType.NetworkAbility && line.Split('|')[7] == "Ramuh")
+                        {
+                            Debug.WriteLine(line);
+                        }
+                    }
                 }
             }
 
