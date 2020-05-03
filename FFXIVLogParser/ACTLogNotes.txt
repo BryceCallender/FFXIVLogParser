@@ -255,7 +255,7 @@
 	maxLB (byte data to string) (1 2 or 3. Shows what is available to be used during encounter)
 
 
-37 - Network Effect Result
+37 - Network Effect Result => Seems to be when skills are hit on the boss
 	DateTime
 	player id
 	player name
