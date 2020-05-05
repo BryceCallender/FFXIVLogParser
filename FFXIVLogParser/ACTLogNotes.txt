@@ -280,6 +280,9 @@
 
 		sequence of 4's
 			[0] => Effect id + (unknown1 << 6) + (effect index << 24) => stored as uint so all packed
+				Effect is a ushort 
+				Unknown1 is a byte
+				Effect index is a byte
 			[1] => uint unknown 2 + uint (unknown 3 << 16)
 			[2] => duration in bytes to uint32 => duration is a float converted to bytes then to an uint so we need to go to uint -> float
 			[3] => actor id => player id
