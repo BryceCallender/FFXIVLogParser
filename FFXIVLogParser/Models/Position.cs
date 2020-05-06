@@ -6,10 +6,10 @@ namespace FFXIVLogParser.Models
 {
     class Position
     {
-        public float X { get; set; }
-        public float Y { get; set; }
-        public float Z { get; set; }
+        public float X { get; set; } = 0.0f;
+        public float Y { get; set; } = 0.0f;
+        public float Z { get; set; } = 0.0f;
 
-        public float Facing { get; set; }
+        public float Facing { get; set; } = 0.0f;
     }
 }

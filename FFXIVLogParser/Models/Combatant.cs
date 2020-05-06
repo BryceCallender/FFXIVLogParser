@@ -8,7 +8,7 @@ namespace FFXIVLogParser.Models
     class Combatant : IEquatable<Combatant>
     {
         public uint ID { get; set; }
-        public string? Name { get; set; }
+        public string Name { get; set; }
         public uint JobID { get; set; }
         public uint Level { get; set; }
         public uint OwnerID { get; set; }
@@ -21,6 +21,9 @@ namespace FFXIVLogParser.Models
         public Position Position { get; set; } = new Position();
 
         public DateTime Timestamp { get; set; }
+
+        public DamageInfo DamageInformation { get; set; }
+        public HealingInfo HealingInformation { get; set; }
 
         public bool Equals(Combatant other)
         {

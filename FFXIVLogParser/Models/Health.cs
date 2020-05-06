@@ -7,15 +7,15 @@ namespace FFXIVLogParser.Models
 {
     class Health : IEquatable<Health>
     {
-        public uint CurrentHP { get; set; }
-        public uint MaxHP { get; set; }
+        public uint CurrentHP { get; set; } = 0;
+        public uint MaxHP { get; set; } = 0;
 
-        public uint CurrentMP { get; set; }
-        public uint MaxMP { get; set; }
+        public uint CurrentMP { get; set; } = 0;
+        public uint MaxMP { get; set; } = 0;
 
-        public uint CurrentTP { get; set; }
-        public uint MaxTP { get; set; }
-
+        public uint CurrentTP { get; set; } = 0;
+        public uint MaxTP { get; set; } = 0;
+         
         public bool Equals(Health other)
         {
             return CurrentHP == other.CurrentHP && CurrentMP == other.CurrentMP;

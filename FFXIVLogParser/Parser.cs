@@ -1,14 +1,16 @@
 ﻿using FFXIVLogParser.Models;
+using FFXIVLogParser.Models.NetworkEvents;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 namespace FFXIVLogParser
 {
     class Parser
     {
-        List<string>? bossNames;
+        List<BossInfo> bossInformation;
 
         List<Encounter> encounters;
 
@@ -17,6 +19,8 @@ namespace FFXIVLogParser
         public Parser()
         {
             encounters = new List<Encounter>();
+            currentEncounter = new Encounter();
+            bossInformation = new List<BossInfo>();
         }
 
         public void ParseLine(string line)
@@ -35,12 +39,18 @@ namespace FFXIVLogParser
 
                     if (ZoneData.zoneInfo.ContainsKey(zoneName))
                     {
-                        bossNames = ZoneData.zoneInfo[zoneName];
+                        bossInformation = ZoneData.zoneInfo[zoneName];
+                        currentEncounter.zoneName = zoneName;
+                        currentEncounter.bosses = bossInformation;
+
+                        Debug.WriteLine("Entered Boss Zone...");
                     }
+                    else
+                    {
+                        Debug.WriteLine($"Entered {zoneName}...");
 
-                    Debug.WriteLine("Entered Boss Zone...");
-
-                    currentEncounter = new Encounter();
+                        currentEncounter = new Encounter();
+                    }
 
                     break;
                 case LogMessageType.ChangePrimaryPlayer:
@@ -48,7 +58,7 @@ namespace FFXIVLogParser
                 case LogMessageType.AddCombatant:
                     currentEncounter.combatants.Add(ReadCombatant(lineContents));
 
-                    Debug.WriteLine(currentEncounter.combatants.Count);
+                    //Debug.WriteLine(currentEncounter.combatants.Count);
 
                     break;
                 case LogMessageType.RemoveCombatant:
@@ -56,18 +66,33 @@ namespace FFXIVLogParser
 
                     currentEncounter.combatants.Remove(removeCombatant);
 
-                    Debug.WriteLine(currentEncounter.combatants.Count);
-
-                    if (currentEncounter.combatants.Count == currentEncounter.partyMembers.Count)
+                    //Debug.WriteLine(currentEncounter.combatants.Count);
+                    foreach (BossInfo boss in currentEncounter.bosses)
                     {
-                        encounters.Add(currentEncounter);
+                        if (boss.Name == removeCombatant.Name && boss.Level == removeCombatant.Level && boss.MaxHP == removeCombatant.Health.MaxHP)
+                        {
+                            if (bossInformation.Count == 1)
+                            {
+                                currentEncounter.endTime = removeCombatant.Timestamp;
 
-                        Debug.WriteLine("Encounter has ended...");
+                                currentEncounter.isCleared = removeCombatant.Health.CurrentHP == 0;
 
-                        currentEncounter.endTime = removeCombatant.Timestamp;
-                        
-                        currentEncounter.ResetEncounter();
+                                encounters.Add(currentEncounter);
+
+                                Debug.WriteLine("Encounter has ended...");
+
+                                currentEncounter.ResetEncounter();
+                                break;
+                            }
+                            else
+                            {
+                                //Debug.WriteLine(line);
+                                currentEncounter.bosses.Remove(boss);
+                                break;
+                            }
+                        }
                     }
+
 
                     break;
                 case LogMessageType.AddBuff:
@@ -82,13 +107,20 @@ namespace FFXIVLogParser
                     break;
                 case LogMessageType.PartyList:
 
-                    uint.TryParse(lineContents[2], out uint size);
-
-                    int start = 3; //Start of first memeber and going to start + size
-
-                    for (int i = 0; i < size; i++)
+                    //If the encounter hasnt started yet form the party memebers
+                    //This is to avoid the struggles of someone dcing and changing the party size which could end up crashing this algorithm
+                    if (!string.IsNullOrEmpty(currentEncounter.zoneName) && !currentEncounter.startedEncounter)
                     {
-                        currentEncounter.partyMembers.Add(Convert.ToUInt32(lineContents[start + i], 16));
+                        currentEncounter.partyMembers.Clear();
+
+                        uint.TryParse(lineContents[2], out uint size);
+
+                        int start = 3; //Start of first memeber and going to start + size
+
+                        for (int i = 0; i < size; i++)
+                        {
+                            currentEncounter.partyMembers.Add(Convert.ToUInt32(lineContents[start + i], 16));
+                        }
                     }
 
                     break;
@@ -101,6 +133,24 @@ namespace FFXIVLogParser
                 case LogMessageType.NetworkStartsCasting:
                     break;
                 case LogMessageType.NetworkAbility:
+                    if (bossInformation.Count == 0)
+                        break;
+
+                    NetworkAbility ability = ReadAbilityUsed(lineContents);
+
+                    if (!currentEncounter.startedEncounter && bossInformation.Any(boss => boss.Name == ability.TargetName))
+                    {
+                        currentEncounter.startTime = ability.Timestamp;
+                        Debug.WriteLine($"Start of fight: { ability.Timestamp}");
+                        currentEncounter.startedEncounter = true;
+                    }
+
+                    if(bossInformation.Any(boss => boss.Name == ability.TargetName)) 
+                    {
+                        currentEncounter.networkAbilities.Enqueue(ability);
+                        //Debug.WriteLine($"{ability.SkillName} used: {ability.Timestamp.Subtract(currentEncounter.startTime)}");
+                    }
+                    
                     break;
                 case LogMessageType.NetworkAOEAbility:
                     break;
@@ -131,6 +181,9 @@ namespace FFXIVLogParser
                 case LogMessageType.NetworkLimitBreak:
                     break;
                 case LogMessageType.NetworkEffectResult:
+
+                    
+
                     break;
                 case LogMessageType.NetworkStatusList:
                     break;
@@ -144,6 +197,7 @@ namespace FFXIVLogParser
                     {
                         Debug.WriteLine(setting.Trim());
                     }
+
                     break;
                 case LogMessageType.Process:
                     break;
@@ -177,12 +231,12 @@ namespace FFXIVLogParser
                 BNpcID = Convert.ToUInt32(lineContents[10], 16),
                 Health = new Health
                 {
-                    CurrentHP = Convert.ToUInt32(lineContents[11], 16),
-                    MaxHP = Convert.ToUInt32(lineContents[12], 16),
-                    CurrentMP = Convert.ToUInt32(lineContents[13], 16),
-                    MaxMP = Convert.ToUInt32(lineContents[14], 16),
-                    CurrentTP = Convert.ToUInt32(lineContents[15], 16),
-                    MaxTP = Convert.ToUInt32(lineContents[16], 16)
+                    CurrentHP = Convert.ToUInt32(lineContents[11]),
+                    MaxHP = Convert.ToUInt32(lineContents[12]),
+                    CurrentMP = Convert.ToUInt32(lineContents[13]),
+                    MaxMP = Convert.ToUInt32(lineContents[14]),
+                    CurrentTP = Convert.ToUInt32(lineContents[15]),
+                    MaxTP = Convert.ToUInt32(lineContents[16])
                 },
                 Position = new Position
                 {
@@ -194,6 +248,50 @@ namespace FFXIVLogParser
             };
         }
 
-        private NetworkAbility
+        private NetworkAbility ReadAbilityUsed(string[] lineContents)
+        {
+            return new NetworkAbility
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                ActorID = Convert.ToUInt32(lineContents[2], 16),
+                ActorName = lineContents[3],
+                SkillID = Convert.ToUInt32(lineContents[4], 16),
+                SkillName = lineContents[5],
+                TargetID = Convert.ToUInt32(lineContents[6], 16),
+                TargetName = string.IsNullOrEmpty(lineContents[7]) ? "" : lineContents[7],
+                ActorHealth = new Health
+                {
+                    CurrentHP = string.IsNullOrEmpty(lineContents[24]) ? 0 : Convert.ToUInt32(lineContents[24]),
+                    MaxHP = string.IsNullOrEmpty(lineContents[25]) ? 0 : Convert.ToUInt32(lineContents[25]),
+                    CurrentMP = string.IsNullOrEmpty(lineContents[26]) ? 0 : Convert.ToUInt32(lineContents[26]),
+                    MaxMP = string.IsNullOrEmpty(lineContents[27]) ? 0 : Convert.ToUInt32(lineContents[27]),
+                    CurrentTP = string.IsNullOrEmpty(lineContents[28]) ? 0 : Convert.ToUInt32(lineContents[28]),
+                    MaxTP = string.IsNullOrEmpty(lineContents[29]) ? 0 : Convert.ToUInt32(lineContents[29]),
+                },
+                ActorPosition = new Position
+                {
+                    X = string.IsNullOrEmpty(lineContents[30]) ? 0 : Convert.ToSingle(lineContents[30]),
+                    Y = string.IsNullOrEmpty(lineContents[31]) ? 0 : Convert.ToSingle(lineContents[31]),
+                    Z = string.IsNullOrEmpty(lineContents[32]) ? 0 : Convert.ToSingle(lineContents[32]),
+                    Facing = string.IsNullOrEmpty(lineContents[33]) ? 0 : Convert.ToSingle(lineContents[33]),
+                },
+                TargetHealth = new Health
+                {
+                    CurrentHP = string.IsNullOrEmpty(lineContents[34]) ? 0 : Convert.ToUInt32(lineContents[34]),
+                    MaxHP = string.IsNullOrEmpty(lineContents[35]) ? 0 : Convert.ToUInt32(lineContents[35]),
+                    CurrentMP = string.IsNullOrEmpty(lineContents[36]) ? 0 : Convert.ToUInt32(lineContents[36]),
+                    MaxMP = string.IsNullOrEmpty(lineContents[37]) ? 0 : Convert.ToUInt32(lineContents[37]),
+                    CurrentTP = string.IsNullOrEmpty(lineContents[38]) ? 0 : Convert.ToUInt32(lineContents[38]),
+                    MaxTP = string.IsNullOrEmpty(lineContents[39]) ? 0 : Convert.ToUInt32(lineContents[39])
+                },
+                TargetPosition = new Position
+                {
+                    X = string.IsNullOrEmpty(lineContents[40]) ? 0 : Convert.ToSingle(lineContents[40]),
+                    Y = string.IsNullOrEmpty(lineContents[41]) ? 0 : Convert.ToSingle(lineContents[41]),
+                    Z = string.IsNullOrEmpty(lineContents[42]) ? 0 : Convert.ToSingle(lineContents[42]),
+                    Facing = string.IsNullOrEmpty(lineContents[43]) ? 0 : Convert.ToSingle(lineContents[43]),
+                }
+            };
+        }
     }
 }

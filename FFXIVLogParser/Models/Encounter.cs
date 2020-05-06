@@ -15,17 +15,38 @@ namespace FFXIVLogParser.Models
         public DateTime startTime;
         public DateTime endTime;
 
+        public string zoneName;
+        public List<BossInfo> bosses;
+
+        public bool startedEncounter;
+
+        public bool isCleared;
+
         public Encounter()
         {
             combatants = new List<Combatant>();
             partyMembers = new List<uint>();
             networkAbilities = new Queue<NetworkAbility>();
+            startedEncounter = false;
+            zoneName = "";
+            bosses = new List<BossInfo>();
         }
 
         public void ResetEncounter()
         {
             combatants.Clear();
             networkAbilities.Clear();
+            startedEncounter = false;
+            
+            if (ZoneData.zoneInfo.ContainsKey(zoneName))
+            {
+                bosses = ZoneData.zoneInfo[zoneName];
+            }
+            else
+            {
+                zoneName = "";
+                bosses.Clear();
+            }
         }
     }
 }
