@@ -12,7 +12,7 @@ namespace FFXIVLogParser
     {
         List<BossInfo> bossInformation;
 
-        List<Encounter> encounters;
+        public List<Encounter> encounters;
 
         Encounter currentEncounter;
 
@@ -43,7 +43,7 @@ namespace FFXIVLogParser
                         currentEncounter.zoneName = zoneName;
                         currentEncounter.bosses = bossInformation;
 
-                        Debug.WriteLine("Entered Boss Zone...");
+                        Debug.WriteLine($"Entered {zoneName}...");
                     }
                     else
                     {
@@ -56,9 +56,19 @@ namespace FFXIVLogParser
                 case LogMessageType.ChangePrimaryPlayer:
                     break;
                 case LogMessageType.AddCombatant:
+                    Combatant addCombatant = ReadCombatant(lineContents);
+
                     currentEncounter.combatants.Add(ReadCombatant(lineContents));
 
-                    //Debug.WriteLine(currentEncounter.combatants.Count);
+                    foreach (BossInfo boss in currentEncounter.bosses)
+                    {
+                        if (boss.Name == addCombatant.Name && boss.Level == addCombatant.Level && (boss.MaxHP == addCombatant.Health.MaxHP || boss.MaxHP == addCombatant.Health.CurrentHP))
+                        {
+                            currentEncounter.endedEncounter = false;
+                        }
+
+                    }
+                        //Debug.WriteLine(currentEncounter.combatants.Count);
 
                     break;
                 case LogMessageType.RemoveCombatant:
@@ -69,24 +79,23 @@ namespace FFXIVLogParser
                     //Debug.WriteLine(currentEncounter.combatants.Count);
                     foreach (BossInfo boss in currentEncounter.bosses)
                     {
-                        if (boss.Name == removeCombatant.Name && boss.Level == removeCombatant.Level && boss.MaxHP == removeCombatant.Health.MaxHP)
+                        if (!currentEncounter.endedEncounter && boss.Name == removeCombatant.Name && boss.Level == removeCombatant.Level && (boss.MaxHP == removeCombatant.Health.MaxHP || boss.MaxHP == removeCombatant.Health.CurrentHP))
                         {
-                            if (bossInformation.Count == 1)
+                            if (currentEncounter.bosses.Count == 1)
                             {
                                 currentEncounter.endTime = removeCombatant.Timestamp;
-
+                                currentEncounter.endedEncounter = true;
                                 currentEncounter.isCleared = removeCombatant.Health.CurrentHP == 0;
 
                                 encounters.Add(currentEncounter);
 
-                                Debug.WriteLine("Encounter has ended...");
+                                Debug.WriteLine($"Encounter has ended... It took {currentEncounter.endTime.Subtract(currentEncounter.startTime)}");
 
                                 currentEncounter.ResetEncounter();
                                 break;
                             }
                             else
                             {
-                                //Debug.WriteLine(line);
                                 currentEncounter.bosses.Remove(boss);
                                 break;
                             }
@@ -134,9 +143,23 @@ namespace FFXIVLogParser
                     break;
                 case LogMessageType.NetworkAbility:
                     if (bossInformation.Count == 0)
+                    { 
                         break;
+                    }
 
                     NetworkAbility ability = ReadAbilityUsed(lineContents);
+
+                    Combatant combatant = currentEncounter.GetCombatantFromID(ability.ActorID);
+
+                    //Check if the ability used is a new skill if it is lets keep track of it from the combatant side
+                    //Itll be updated in the NetworkEffectResult since thats when the information is able to be deteced
+                    if(combatant != null)
+                    {
+                        if(combatant.AbilityInfo.ContainsKey(ability.SkillID))
+                        {
+                            combatant.AbilityInfo.Add(ability.SkillID, new AbilityInfo());
+                        }
+                    }
 
                     if (!currentEncounter.startedEncounter && bossInformation.Any(boss => boss.Name == ability.TargetName))
                     {
@@ -147,7 +170,7 @@ namespace FFXIVLogParser
 
                     if(bossInformation.Any(boss => boss.Name == ability.TargetName)) 
                     {
-                        currentEncounter.networkAbilities.Enqueue(ability);
+                        currentEncounter.networkAbilities.Add(ability);
                         //Debug.WriteLine($"{ability.SkillName} used: {ability.Timestamp.Subtract(currentEncounter.startTime)}");
                     }
                     
@@ -181,8 +204,35 @@ namespace FFXIVLogParser
                 case LogMessageType.NetworkLimitBreak:
                     break;
                 case LogMessageType.NetworkEffectResult:
+                    NetworkEffectResult result = ReadNetworkEffectResult(lineContents);
 
-                    
+                    foreach (BossInfo boss in currentEncounter.bosses)
+                    {
+                        if(result.ActorName == boss.Name && result.Health.CurrentHP == 0 && boss.HasToDie)
+                        {
+                            boss.IsDead = true;
+                        }
+                    }
+
+                    combatant = currentEncounter.GetCombatantFromID(result.ActorID);
+
+                    if (combatant != null)
+                    {
+                        
+                    }
+
+                    if (!currentEncounter.endedEncounter && currentEncounter.AreRequiredBossesDead())
+                    {
+                        currentEncounter.endedEncounter = true;
+                        currentEncounter.endTime = result.Timestamp;
+                        currentEncounter.isCleared = true;
+
+                        encounters.Add(currentEncounter);
+
+                        Debug.WriteLine($"Encounter has ended... It took {currentEncounter.endTime.Subtract(currentEncounter.startTime)}");
+
+                        currentEncounter.ResetEncounter();
+                    }
 
                     break;
                 case LogMessageType.NetworkStatusList:
@@ -290,6 +340,32 @@ namespace FFXIVLogParser
                     Y = string.IsNullOrEmpty(lineContents[41]) ? 0 : Convert.ToSingle(lineContents[41]),
                     Z = string.IsNullOrEmpty(lineContents[42]) ? 0 : Convert.ToSingle(lineContents[42]),
                     Facing = string.IsNullOrEmpty(lineContents[43]) ? 0 : Convert.ToSingle(lineContents[43]),
+                }
+            };
+        }
+
+        private NetworkEffectResult ReadNetworkEffectResult(string[] lineContents)
+        {
+            return new NetworkEffectResult
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                ActorID = Convert.ToUInt32(lineContents[2], 16),
+                ActorName = lineContents[3],
+                Health = new Health
+                {
+                    CurrentHP = string.IsNullOrEmpty(lineContents[5]) ? 0 : Convert.ToUInt32(lineContents[5]),
+                    MaxHP = string.IsNullOrEmpty(lineContents[6]) ? 0 : Convert.ToUInt32(lineContents[6]),
+                    CurrentMP = string.IsNullOrEmpty(lineContents[7]) ? 0 : Convert.ToUInt32(lineContents[7]),
+                    MaxMP = string.IsNullOrEmpty(lineContents[8]) ? 0 : Convert.ToUInt32(lineContents[8]),
+                    CurrentTP = string.IsNullOrEmpty(lineContents[9]) ? 0 : Convert.ToUInt32(lineContents[9]),
+                    MaxTP = string.IsNullOrEmpty(lineContents[10]) ? 0 : Convert.ToUInt32(lineContents[10])
+                },
+                Position = new Position
+                {
+                    X = string.IsNullOrEmpty(lineContents[11]) ? 0 : Convert.ToSingle(lineContents[11]),
+                    Y = string.IsNullOrEmpty(lineContents[12]) ? 0 : Convert.ToSingle(lineContents[12]),
+                    Z = string.IsNullOrEmpty(lineContents[13]) ? 0 : Convert.ToSingle(lineContents[13]),
+                    Facing = string.IsNullOrEmpty(lineContents[14]) ? 0 : Convert.ToSingle(lineContents[14]),
                 }
             };
         }

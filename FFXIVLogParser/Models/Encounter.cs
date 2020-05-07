@@ -1,6 +1,7 @@
 ﻿using FFXIVLogParser.Models.NetworkEvents;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace FFXIVLogParser.Models
@@ -10,7 +11,7 @@ namespace FFXIVLogParser.Models
         public List<Combatant> combatants;
         public List<uint> partyMembers;
 
-        public Queue<NetworkAbility> networkAbilities;
+        public List<NetworkAbility> networkAbilities;
 
         public DateTime startTime;
         public DateTime endTime;
@@ -19,6 +20,7 @@ namespace FFXIVLogParser.Models
         public List<BossInfo> bosses;
 
         public bool startedEncounter;
+        public bool endedEncounter;
 
         public bool isCleared;
 
@@ -26,7 +28,7 @@ namespace FFXIVLogParser.Models
         {
             combatants = new List<Combatant>();
             partyMembers = new List<uint>();
-            networkAbilities = new Queue<NetworkAbility>();
+            networkAbilities = new List<NetworkAbility>();
             startedEncounter = false;
             zoneName = "";
             bosses = new List<BossInfo>();
@@ -47,6 +49,16 @@ namespace FFXIVLogParser.Models
                 zoneName = "";
                 bosses.Clear();
             }
+        }
+
+        public bool AreRequiredBossesDead()
+        {
+            return bosses.Where(boss => boss.HasToDie).All(boss => boss.IsDead); //Returns true if all the bosses who have to die are dead
+        }
+
+        public Combatant GetCombatantFromID(uint id)
+        {
+            return combatants.Where(combatant => combatant.ID == id).FirstOrDefault();
         }
     }
 }
