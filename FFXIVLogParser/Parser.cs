@@ -140,6 +140,27 @@ namespace FFXIVLogParser
                 case LogMessageType.ParsedPartyMember:
                     break;
                 case LogMessageType.NetworkStartsCasting:
+                    NetworkAbilityCast networkAbilityCast = ReadNetworkCast(lineContents);
+
+                    currentEncounter.networkCastingAbilities.Add(networkAbilityCast);
+
+                    Combatant combatant = currentEncounter.GetCombatantFromID(networkAbilityCast.ActorID);
+
+                    //They started casting so we count this as a skill usage even if cancelled or interruped
+                    if(combatant != null)
+                    {
+                        //combatant.AbilityInfo[networkAbilityCast.SkillID].CastAmount++;
+                    }
+
+                    if(combatant != null && !currentEncounter.startedEncounter && currentEncounter.bosses.Any(boss => boss.Name == networkAbilityCast.TargetName))
+                    {
+                        currentEncounter.summaryEvents.Add(new ReportEvent
+                        {
+                            EventTime = networkAbilityCast.Timestamp.TimeOfDay,
+                            EventDescription = $"{networkAbilityCast.ActorName} prepares {networkAbilityCast.SkillName} on {networkAbilityCast.TargetName}"
+                        });
+                    }
+
                     break;
                 case LogMessageType.NetworkAbility:
                     if (bossInformation.Count == 0)
@@ -149,7 +170,7 @@ namespace FFXIVLogParser
 
                     NetworkAbility ability = ReadAbilityUsed(lineContents);
 
-                    Combatant combatant = currentEncounter.GetCombatantFromID(ability.ActorID);
+                    combatant = currentEncounter.GetCombatantFromID(ability.ActorID);
 
                     //Check if the ability used is a new skill if it is lets keep track of it from the combatant side
                     //Itll be updated in the NetworkEffectResult since thats when the information is able to be deteced
@@ -164,13 +185,21 @@ namespace FFXIVLogParser
                     if (!currentEncounter.startedEncounter && bossInformation.Any(boss => boss.Name == ability.TargetName))
                     {
                         currentEncounter.startTime = ability.Timestamp;
-                        Debug.WriteLine($"Start of fight: { ability.Timestamp}");
+                        Debug.WriteLine($"Start of fight: {ability.Timestamp}");
                         currentEncounter.startedEncounter = true;
+
+                        currentEncounter.AdjustTimeSpans();
                     }
 
-                    if(bossInformation.Any(boss => boss.Name == ability.TargetName)) 
+                    if(currentEncounter.bosses.Any(boss => boss.Name == ability.TargetName)) 
                     {
                         currentEncounter.networkAbilities.Add(ability);
+
+                        if(combatant != null)
+                        {
+                            //Skill information in here
+                        }
+
                         //Debug.WriteLine($"{ability.SkillName} used: {ability.Timestamp.Subtract(currentEncounter.startTime)}");
                     }
                     
@@ -178,10 +207,25 @@ namespace FFXIVLogParser
                 case LogMessageType.NetworkAOEAbility:
                     break;
                 case LogMessageType.NetworkCancelAbility:
+                    NetworkAbilityCancel networkAbilityCancel = ReadNetworkSkillCancel(lineContents);
+
+
+
                     break;
                 case LogMessageType.NetworkDoT:
                     break;
                 case LogMessageType.NetworkDeath:
+                    NetworkDeath death = ReadNetworkDeath(lineContents);
+
+                    if(currentEncounter.startedEncounter)
+                    {
+                        currentEncounter.summaryEvents.Add(new ReportEvent
+                        {
+                            EventTime = death.Timestamp.Subtract(currentEncounter.startTime),
+                            EventDescription = $"{death.ActorName} died"
+                        });
+                    }
+
                     break;
                 case LogMessageType.NetworkBuff:
                     break;
@@ -202,6 +246,14 @@ namespace FFXIVLogParser
                 case LogMessageType.NetworkTether:
                     break;
                 case LogMessageType.NetworkLimitBreak:
+                    LimitBreak limitBreak = ReadLimitBreak(lineContents);
+
+                    currentEncounter.summaryEvents.Add(new ReportEvent
+                    {
+                        EventTime = limitBreak.Timestamp.Subtract(currentEncounter.startTime),
+                        EventDescription = $"The limit break guage has been updated to {limitBreak.LimitBreakGuage}. {limitBreak.MaxLimitBreakNumber} bars are available"
+                    });
+
                     break;
                 case LogMessageType.NetworkEffectResult:
                     NetworkEffectResult result = ReadNetworkEffectResult(lineContents);
@@ -214,12 +266,7 @@ namespace FFXIVLogParser
                         }
                     }
 
-                    combatant = currentEncounter.GetCombatantFromID(result.ActorID);
-
-                    if (combatant != null)
-                    {
-                        
-                    }
+                    //Figure out the damage the skill inflicted and then go back and credit the ability for that damage
 
                     if (!currentEncounter.endedEncounter && currentEncounter.AreRequiredBossesDead())
                     {
@@ -229,13 +276,38 @@ namespace FFXIVLogParser
 
                         encounters.Add(currentEncounter);
 
-                        Debug.WriteLine($"Encounter has ended... It took {currentEncounter.endTime.Subtract(currentEncounter.startTime)}");
+                        Debug.WriteLine($"Encounter cleared!!! It took {currentEncounter.endTime.Subtract(currentEncounter.startTime)}");
 
                         currentEncounter.ResetEncounter();
                     }
 
                     break;
                 case LogMessageType.NetworkStatusList:
+                    NetworkStatusList networkStatusList = ReadNetworkStatusList(lineContents);
+
+                    foreach (BossInfo boss in currentEncounter.bosses)
+                    {
+                        if (networkStatusList.TargetName == boss.Name && networkStatusList.Health.CurrentHP == 0 && boss.HasToDie)
+                        {
+                            boss.IsDead = true;
+                        }
+                    }
+
+                    //Figure out the damage the skill inflicted and then go back and credit the ability for that damage
+
+                    if (!currentEncounter.endedEncounter && currentEncounter.AreRequiredBossesDead())
+                    {
+                        currentEncounter.endedEncounter = true;
+                        currentEncounter.endTime = networkStatusList.Timestamp;
+                        currentEncounter.isCleared = true;
+
+                        encounters.Add(currentEncounter);
+
+                        Debug.WriteLine($"Encounter cleared!!! It took {currentEncounter.endTime.Subtract(currentEncounter.startTime)}");
+
+                        currentEncounter.ResetEncounter();
+                    }
+
                     break;
                 case LogMessageType.NetworkUpdateHp:
                     break;
@@ -264,6 +336,8 @@ namespace FFXIVLogParser
                     break;
             }
         }
+
+        #region Reading Network Data Functions
 
         private Combatant ReadCombatant(string[] lineContents)
         {
@@ -369,5 +443,193 @@ namespace FFXIVLogParser
                 }
             };
         }
+
+        private NetworkAbilityCast ReadNetworkCast(string[] lineContents)
+        {
+            return new NetworkAbilityCast
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                ActorID = Convert.ToUInt32(lineContents[2], 16),
+                ActorName = lineContents[3],
+                SkillID = Convert.ToUInt32(lineContents[4], 16),
+                SkillName = lineContents[5],
+                TargetID = Convert.ToUInt32(lineContents[6], 16),
+                TargetName = lineContents[7],
+                CastDuration = Convert.ToSingle(lineContents[8])
+            };
+        }
+
+        private NetworkAbilityCancel ReadNetworkSkillCancel(string[] lineContents)
+        {
+            return new NetworkAbilityCancel
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                ActorID = Convert.ToUInt32(lineContents[2], 16),
+                ActorName = lineContents[3],
+                SkillID = Convert.ToUInt32(lineContents[4], 16),
+                SkillName = lineContents[5],
+                Cancelled = lineContents[6] == "Cancelled",
+                Interrupted = lineContents[6] == "Interrupted"
+            };
+        }
+
+        private LimitBreak ReadLimitBreak(string[] lineContents)
+        {
+            return new LimitBreak
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                LimitBreakGuage = Convert.ToUInt32(lineContents[2], 16),
+                MaxLimitBreakNumber = Convert.ToUInt16(lineContents[3])
+            };
+        }
+
+        private NetworkDeath ReadNetworkDeath(string[] lineContents)
+        {
+            return new NetworkDeath
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                ActorID = Convert.ToUInt32(lineContents[2], 16),
+                ActorName = lineContents[3],
+                TargetID = Convert.ToUInt32(lineContents[4], 16),
+                TargetName = lineContents[5]
+            };
+        }
+
+        private NetworkDoT ReadNetworkDoT(string[] lineContents)
+        {
+            return new NetworkDoT
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                TargetID = Convert.ToUInt32(lineContents[2], 16),
+                TargetName = lineContents[3],
+                IsDamage = lineContents[4] == "DoT",
+                Damage = Convert.ToUInt32(lineContents[5]),
+                BuffID = Convert.ToUInt32(lineContents[6], 16),
+                TargetHealth = new Health
+                {
+                    CurrentHP = string.IsNullOrEmpty(lineContents[7]) ? 0 : Convert.ToUInt32(lineContents[7]),
+                    MaxHP = string.IsNullOrEmpty(lineContents[8]) ? 0 : Convert.ToUInt32(lineContents[8]),
+                    CurrentMP = string.IsNullOrEmpty(lineContents[9]) ? 0 : Convert.ToUInt32(lineContents[9]),
+                    MaxMP = string.IsNullOrEmpty(lineContents[10]) ? 0 : Convert.ToUInt32(lineContents[10]),
+                    CurrentTP = string.IsNullOrEmpty(lineContents[11]) ? 0 : Convert.ToUInt32(lineContents[11]),
+                    MaxTP = string.IsNullOrEmpty(lineContents[12]) ? 0 : Convert.ToUInt32(lineContents[12])
+                },
+                TargetPosition = new Position
+                {
+                    X = string.IsNullOrEmpty(lineContents[13]) ? 0 : Convert.ToSingle(lineContents[13]),
+                    Y = string.IsNullOrEmpty(lineContents[14]) ? 0 : Convert.ToSingle(lineContents[14]),
+                    Z = string.IsNullOrEmpty(lineContents[15]) ? 0 : Convert.ToSingle(lineContents[15]),
+                    Facing = string.IsNullOrEmpty(lineContents[16]) ? 0 : Convert.ToSingle(lineContents[16]),
+                }
+            };
+        }
+
+        private NetworkStatusList ReadNetworkStatusList(string[] lineContents)
+        {
+            List<Status> statuses = new List<Status>();
+
+            int index = 15;
+
+            //while(index < lineContents.Length - 1)
+            //{
+            //    //Read in 3 at a time
+            //    statuses.Add(new Status
+            //    {
+            //        EffectID = Convert.ToUInt32(lineContents[index].Substring(0,lineContents[index].Length - 4), 16),
+
+            //    });
+            //}
+
+
+            return new NetworkStatusList
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                TargetID = Convert.ToUInt32(lineContents[2], 16),
+                TargetName = lineContents[3],
+                JobID = Convert.ToUInt32(lineContents[4].Substring(0, 2), 16),
+                Level1 = Convert.ToUInt32(lineContents[4].Substring(2, 2), 16),
+                Level2 = Convert.ToUInt32(lineContents[4].Substring(4, 2), 16),
+                Level3 = Convert.ToUInt32(lineContents[4].Substring(6, 2), 16),
+                Health = new Health
+                {
+                    CurrentHP = string.IsNullOrEmpty(lineContents[5]) ? 0 : Convert.ToUInt32(lineContents[5]),
+                    MaxHP = string.IsNullOrEmpty(lineContents[6]) ? 0 : Convert.ToUInt32(lineContents[6]),
+                    CurrentMP = string.IsNullOrEmpty(lineContents[7]) ? 0 : Convert.ToUInt32(lineContents[7]),
+                    MaxMP = string.IsNullOrEmpty(lineContents[8]) ? 0 : Convert.ToUInt32(lineContents[8]),
+                    CurrentTP = string.IsNullOrEmpty(lineContents[9]) ? 0 : Convert.ToUInt32(lineContents[9]),
+                    MaxTP = string.IsNullOrEmpty(lineContents[10]) ? 0 : Convert.ToUInt32(lineContents[10])
+                },
+                Position = new Position
+                {
+                    X = string.IsNullOrEmpty(lineContents[11]) ? 0 : Convert.ToSingle(lineContents[11]),
+                    Y = string.IsNullOrEmpty(lineContents[12]) ? 0 : Convert.ToSingle(lineContents[12]),
+                    Z = string.IsNullOrEmpty(lineContents[13]) ? 0 : Convert.ToSingle(lineContents[13]),
+                    Facing = string.IsNullOrEmpty(lineContents[14]) ? 0 : Convert.ToSingle(lineContents[14]),
+                },
+            };
+        }
+
+        private NetworkAOEAbility ReadNetworkAOEAbility(string[] lineContents)
+        {
+            return new NetworkAOEAbility
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                ActorID = Convert.ToUInt32(lineContents[2], 16),
+                ActorName = lineContents[3],
+                SkillID = Convert.ToUInt32(lineContents[4], 16),
+                SkillName = lineContents[5],
+                TargetID = Convert.ToUInt32(lineContents[6], 16),
+                TargetName = string.IsNullOrEmpty(lineContents[7]) ? "" : lineContents[7],
+                ActorHealth = new Health
+                {
+                    CurrentHP = string.IsNullOrEmpty(lineContents[24]) ? 0 : Convert.ToUInt32(lineContents[24]),
+                    MaxHP = string.IsNullOrEmpty(lineContents[25]) ? 0 : Convert.ToUInt32(lineContents[25]),
+                    CurrentMP = string.IsNullOrEmpty(lineContents[26]) ? 0 : Convert.ToUInt32(lineContents[26]),
+                    MaxMP = string.IsNullOrEmpty(lineContents[27]) ? 0 : Convert.ToUInt32(lineContents[27]),
+                    CurrentTP = string.IsNullOrEmpty(lineContents[28]) ? 0 : Convert.ToUInt32(lineContents[28]),
+                    MaxTP = string.IsNullOrEmpty(lineContents[29]) ? 0 : Convert.ToUInt32(lineContents[29]),
+                },
+                ActorPosition = new Position
+                {
+                    X = string.IsNullOrEmpty(lineContents[30]) ? 0 : Convert.ToSingle(lineContents[30]),
+                    Y = string.IsNullOrEmpty(lineContents[31]) ? 0 : Convert.ToSingle(lineContents[31]),
+                    Z = string.IsNullOrEmpty(lineContents[32]) ? 0 : Convert.ToSingle(lineContents[32]),
+                    Facing = string.IsNullOrEmpty(lineContents[33]) ? 0 : Convert.ToSingle(lineContents[33]),
+                },
+                TargetHealth = new Health
+                {
+                    CurrentHP = string.IsNullOrEmpty(lineContents[34]) ? 0 : Convert.ToUInt32(lineContents[34]),
+                    MaxHP = string.IsNullOrEmpty(lineContents[35]) ? 0 : Convert.ToUInt32(lineContents[35]),
+                    CurrentMP = string.IsNullOrEmpty(lineContents[36]) ? 0 : Convert.ToUInt32(lineContents[36]),
+                    MaxMP = string.IsNullOrEmpty(lineContents[37]) ? 0 : Convert.ToUInt32(lineContents[37]),
+                    CurrentTP = string.IsNullOrEmpty(lineContents[38]) ? 0 : Convert.ToUInt32(lineContents[38]),
+                    MaxTP = string.IsNullOrEmpty(lineContents[39]) ? 0 : Convert.ToUInt32(lineContents[39])
+                },
+                TargetPosition = new Position
+                {
+                    X = string.IsNullOrEmpty(lineContents[40]) ? 0 : Convert.ToSingle(lineContents[40]),
+                    Y = string.IsNullOrEmpty(lineContents[41]) ? 0 : Convert.ToSingle(lineContents[41]),
+                    Z = string.IsNullOrEmpty(lineContents[42]) ? 0 : Convert.ToSingle(lineContents[42]),
+                    Facing = string.IsNullOrEmpty(lineContents[43]) ? 0 : Convert.ToSingle(lineContents[43]),
+                }
+            };
+        }
+
+        private NetworkBuff ReadNetworkBuff(string[] lineContents)
+        {
+            return new NetworkBuff
+            {
+                Timestamp = DateTime.Parse(lineContents[1]),
+                ActorID = Convert.ToUInt32(lineContents[2], 16),
+                ActorName = lineContents[3],
+                Duration = Convert.ToSingle(lineContents[4]),
+                TargetID = Convert.ToUInt32(lineContents[5], 16),
+                TargetName = lineContents[6],
+                TargetMaxHP = Convert.ToUInt32(lineContents[10]),
+                TargetMaxMP = Convert.ToUInt32(lineContents[11])
+            };
+        }
+
+        #endregion
     }
 }

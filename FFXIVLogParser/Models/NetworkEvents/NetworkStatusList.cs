@@ -7,6 +7,7 @@ namespace FFXIVLogParser.Models.NetworkEvents
     public struct Status
     {
         public uint EffectID { get; set; }
+        public uint OtherInfo { get; set; }
         public float Duration { get; set; }
         public uint ActorID { get; set; }
     }

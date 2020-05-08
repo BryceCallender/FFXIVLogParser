@@ -9,9 +9,13 @@ namespace FFXIVLogParser.Models
     class Encounter
     {
         public List<Combatant> combatants;
-        public List<uint> partyMembers;
+
+        public List<uint> partyMembers; //Query combatant list to find the party members
 
         public List<NetworkAbility> networkAbilities;
+        public List<NetworkAbilityCast> networkCastingAbilities;
+
+        public List<ReportEvent> summaryEvents; //Events Time and Description
 
         public DateTime startTime;
         public DateTime endTime;
@@ -29,15 +33,18 @@ namespace FFXIVLogParser.Models
             combatants = new List<Combatant>();
             partyMembers = new List<uint>();
             networkAbilities = new List<NetworkAbility>();
+            networkCastingAbilities = new List<NetworkAbilityCast>();
             startedEncounter = false;
             zoneName = "";
             bosses = new List<BossInfo>();
+            summaryEvents = new List<ReportEvent>();
         }
 
         public void ResetEncounter()
         {
             combatants.Clear();
             networkAbilities.Clear();
+            summaryEvents.Clear();
             startedEncounter = false;
             
             if (ZoneData.zoneInfo.ContainsKey(zoneName))
@@ -59,6 +66,14 @@ namespace FFXIVLogParser.Models
         public Combatant GetCombatantFromID(uint id)
         {
             return combatants.Where(combatant => combatant.ID == id).FirstOrDefault();
+        }
+
+        public void AdjustTimeSpans()
+        {
+            foreach(ReportEvent reportEvent in summaryEvents)
+            {
+                reportEvent.EventTime = reportEvent.EventTime.Subtract(startTime.TimeOfDay);
+            }
         }
     }
 }

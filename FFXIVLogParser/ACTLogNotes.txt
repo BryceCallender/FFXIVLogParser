@@ -316,14 +316,13 @@
 	Complex status list (need to figure out)  **** Iterates over and will output 3 at a time as long as index * 3 is less than num which is the furthest non 0 number in the list ****
 
 
-	Effect id
-	Other info 
+	Effect id + Other info 
 	duration
 	player id
 
 	0|0|0|0A016D|41F00000|E0000000|0A0386|41F00000|E0000000|28E80030|43C39CB3|106C6619||8f647e60b07e9cd3c1702b8576396450
 
-	for (byte index = 0; index < (byte) 30; ++index)
+      for (byte index = 0; index < (byte) 30; ++index)
       {
         if (effects[index].EffectID != (ushort) 0)
         {

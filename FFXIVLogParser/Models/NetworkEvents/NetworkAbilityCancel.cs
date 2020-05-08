@@ -11,9 +11,7 @@ namespace FFXIVLogParser.Models.NetworkEvents
         public string ActorName { get; set; }
         public uint SkillID { get; set; }
         public string SkillName { get; set; }
-        public uint TargetID { get; set; }
-        public string TargetName { get; set; }
-        public bool? Cancelled { get; set; }
-        public bool? Interrupted { get; set; }
+        public bool Cancelled { get; set; }
+        public bool Interrupted { get; set; }
     }
 }
