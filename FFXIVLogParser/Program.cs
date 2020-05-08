@@ -12,9 +12,9 @@ namespace FFXIVLogParser
             Console.WriteLine("Welcome to FFXIV Log Parser!");
             Console.WriteLine("Enter in the path to the log you want parsed: ");
 
-            //string path = "Network_20510_20200425.log";
+            string path = "Network_20510_20200425.log";
             //string path = @"C:\Users\bryce\Desktop\FFXIVLogParser\FFXIVLogParser\Ramuh_Encounter_1.txt";
-            string path = @"C:\Users\bryce\AppData\Roaming\Advanced Combat Tracker\FFXIVLogs\Network_20510_20200507.log";
+            //string path = @"C:\Users\bryce\AppData\Roaming\Advanced Combat Tracker\FFXIVLogs\Network_20510_20200507.log";
             //string path = Console.ReadLine();
 
             if (!File.Exists(path))

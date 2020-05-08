@@ -188,7 +188,7 @@ namespace FFXIVLogParser
                         Debug.WriteLine($"Start of fight: {ability.Timestamp}");
                         currentEncounter.startedEncounter = true;
 
-                        currentEncounter.AdjustTimeSpans();
+                        currentEncounter.AdjustTimeSpans(); //Makes time negative since actions happened before the start
                     }
 
                     if(currentEncounter.bosses.Any(boss => boss.Name == ability.TargetName)) 
@@ -205,12 +205,21 @@ namespace FFXIVLogParser
                     
                     break;
                 case LogMessageType.NetworkAOEAbility:
+                    NetworkAOEAbility networkAOEAbility = ReadNetworkAOEAbility(lineContents);
+
+                    if(currentEncounter.startedEncounter)
+                    {
+                        currentEncounter.summaryEvents.Add(new ReportEvent
+                        {
+                            EventTime = networkAOEAbility.Timestamp.Subtract(currentEncounter.startTime),
+                            EventDescription = $"{networkAOEAbility.ActorName} casts {networkAOEAbility.SkillName} on {networkAOEAbility.TargetName}"
+                        });
+                    }
+                    
+
                     break;
                 case LogMessageType.NetworkCancelAbility:
                     NetworkAbilityCancel networkAbilityCancel = ReadNetworkSkillCancel(lineContents);
-
-
-
                     break;
                 case LogMessageType.NetworkDoT:
                     break;
@@ -222,7 +231,7 @@ namespace FFXIVLogParser
                         currentEncounter.summaryEvents.Add(new ReportEvent
                         {
                             EventTime = death.Timestamp.Subtract(currentEncounter.startTime),
-                            EventDescription = $"{death.ActorName} died"
+                            EventDescription = $"{death.ActorName} dies"
                         });
                     }
 
@@ -268,7 +277,7 @@ namespace FFXIVLogParser
 
                     //Figure out the damage the skill inflicted and then go back and credit the ability for that damage
 
-                    if (!currentEncounter.endedEncounter && currentEncounter.AreRequiredBossesDead())
+                    if (currentEncounter.startedEncounter && !currentEncounter.endedEncounter && currentEncounter.AreRequiredBossesDead())
                     {
                         currentEncounter.endedEncounter = true;
                         currentEncounter.endTime = result.Timestamp;
@@ -295,7 +304,7 @@ namespace FFXIVLogParser
 
                     //Figure out the damage the skill inflicted and then go back and credit the ability for that damage
 
-                    if (!currentEncounter.endedEncounter && currentEncounter.AreRequiredBossesDead())
+                    if (currentEncounter.startedEncounter && !currentEncounter.endedEncounter && currentEncounter.AreRequiredBossesDead())
                     {
                         currentEncounter.endedEncounter = true;
                         currentEncounter.endTime = networkStatusList.Timestamp;
@@ -530,15 +539,18 @@ namespace FFXIVLogParser
 
             int index = 15;
 
-            //while(index < lineContents.Length - 1)
-            //{
-            //    //Read in 3 at a time
-            //    statuses.Add(new Status
-            //    {
-            //        EffectID = Convert.ToUInt32(lineContents[index].Substring(0,lineContents[index].Length - 4), 16),
-
-            //    });
-            //}
+            while (index < lineContents.Length - 1)
+            {
+                //Read in 3 at a time
+                //statuses.Add(new Status
+                //{
+                //    EffectID = lineContents.Length <= 4 ? 0 : Convert.ToUInt32(lineContents[index].Substring(0, lineContents[index].Length - 4), 16),
+                //    OtherInfo = Convert.ToUInt32(lineContents[index].Substring(lineContents[index].Length - 4), 16),
+                //    Duration = Convert.ToUInt32(lineContents[index + 1], 16),
+                //    ActorID = Convert.ToUInt32(lineContents[index + 2], 16)
+                //});
+                //index += 3;
+            }
 
 
             return new NetworkStatusList
@@ -566,6 +578,7 @@ namespace FFXIVLogParser
                     Z = string.IsNullOrEmpty(lineContents[13]) ? 0 : Convert.ToSingle(lineContents[13]),
                     Facing = string.IsNullOrEmpty(lineContents[14]) ? 0 : Convert.ToSingle(lineContents[14]),
                 },
+                StatusList = statuses
             };
         }
 
