@@ -173,18 +173,12 @@ namespace FFXIVLogParser
 
                     if(currentEncounter.startedEncounter) 
                     {
-                        AbilityReportEvent abilityReportEvent = new AbilityReportEvent
+                        currentEncounter.events.Add(new ReportEvent
                         {
-                            Ability = ability,
-                            Event = new ReportEvent
-                            {
-                                EventTime = ability.Timestamp.Subtract(currentEncounter.startTime),
-                                EventDescription = $"{ability.ActorName} {ability.SkillName} {ability.TargetName}",
-                                EventType = EventType.Summary | EventType.DamageDone
-                            }
-                        };
-
-                        currentEncounter.events.Add(abilityReportEvent.Event);
+                            EventTime = ability.Timestamp.Subtract(currentEncounter.startTime),
+                            EventDescription = $"{ability.ActorName} {ability.SkillName} {ability.TargetName} {ability.GetAbilityDamageInformation()}",
+                            EventType = EventType.Summary | EventType.DamageDone
+                        });
                     }
                     //else if(currentEncounter.startedEncounter && combatant != null && combatant.Name == ability.TargetName)
                     //{
@@ -279,37 +273,6 @@ namespace FFXIVLogParser
                     break;
                 case LogMessageType.NetworkEffectResult:
                     NetworkEffectResult result = ReadNetworkEffectResult(lineContents);
-
-                    if(currentEncounter.startedEncounter)
-                    {
-                        combatant = currentEncounter.GetCombatantFromID(result.ActorID);
-
-                        if(combatant != null)
-                        {
-                            int healthChange = combatant.Health - result.Health;
-
-                            combatant.Health.CurrentHP -= (uint)healthChange;
-
-                            if (combatant.abilityReportEvents.Count > 0)
-                            {
-                                AbilityReportEvent reportEvent = combatant.abilityReportEvents.Dequeue();
-
-                                //Means we had some sort of value change
-                                //Negative means we healed otherwise damage taken
-                                if (healthChange > 0)
-                                {
-                                    reportEvent.Event.EventType = EventType.Summary | EventType.DamageDone;
-                                    reportEvent.Event.EventDescription += $" {healthChange}";
-                                }
-                                else if(healthChange < 0)
-                                {
-                                    reportEvent.Event.EventType = EventType.Summary | EventType.Healing;
-                                    reportEvent.Event.EventDescription += $" +{-healthChange}";
-                                }
-                            }
-                        }
-                    }
-                   
 
                     foreach (BossInfo boss in currentEncounter.bosses)
                     {
@@ -482,9 +445,6 @@ namespace FFXIVLogParser
 
         private NetworkAbility ReadAbilityUsed(string[] lineContents)
         {
-            //Debug.WriteLine($"{lineContents[3]} uses {lineContents[5]}:  {Convert.ToUInt64(lineContents[9].Substring(0, lineContents[9].Length - 4), 16)}");
-
-
             return new NetworkAbility
             {
                 Timestamp = DateTime.Parse(lineContents[1]),
@@ -494,6 +454,8 @@ namespace FFXIVLogParser
                 SkillName = lineContents[5],
                 TargetID = Convert.ToUInt32(lineContents[6], 16),
                 TargetName = string.IsNullOrEmpty(lineContents[7]) ? "" : lineContents[7],
+                Flags = Convert.ToUInt32(lineContents[8], 16),
+                DamageHex = lineContents[9],
                 ActorHealth = new Health
                 {
                     CurrentHP = string.IsNullOrEmpty(lineContents[24]) ? 0 : Convert.ToUInt32(lineContents[24]),
