@@ -1,0 +1,1135 @@
+-21:51:45.6820000		The limit break guage has been updated to 0. 2 bars are available
+00:00:00.6270000		The limit break guage has been updated to 0. 3 bars are available
+00:00:01.3400000		The limit break guage has been updated to 220. 3 bars are available
+00:00:03.2130000		White Crystal casts Salted Earth on White Crystal
+00:00:04.3300000		The limit break guage has been updated to 440. 3 bars are available
+00:00:04.4640000		Dengue Fever casts Assize on Dengue Fever
+00:00:04.4640000		Dengue Fever casts Assize on Ramuh
+00:00:04.4640000		Dengue Fever casts Assize on Angk H'zhet
+00:00:04.4640000		Dengue Fever casts Assize on Moryn Ward
+00:00:04.4640000		Dengue Fever casts Assize on Stone Wolf
+00:00:04.4640000		Dengue Fever casts Assize on White Crystal
+00:00:04.4640000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:00:04.4640000		Dengue Fever casts Assize on Blue Fever
+00:00:04.4640000		Dengue Fever casts Assize on Super Negative
+00:00:07.3250000		The limit break guage has been updated to 660. 3 bars are available
+00:00:07.4140000		Blue Fever casts Battle Voice on Moryn Ward
+00:00:07.4140000		Blue Fever casts Battle Voice on Angk H'zhet
+00:00:07.4140000		Blue Fever casts Battle Voice on White Crystal
+00:00:07.4140000		Blue Fever casts Battle Voice on Cagnazzo Tarakona
+00:00:07.4140000		Blue Fever casts Battle Voice on Super Negative
+00:00:07.4140000		Blue Fever casts Battle Voice on Dengue Fever
+00:00:07.4140000		Blue Fever casts Battle Voice on Stone Wolf
+00:00:08.2180000		White Crystal casts Dark Missionary on White Crystal
+00:00:08.2180000		White Crystal casts Dark Missionary on Angk H'zhet
+00:00:08.2180000		White Crystal casts Dark Missionary on Super Negative
+00:00:08.2180000		White Crystal casts Dark Missionary on Moryn Ward
+00:00:08.2180000		White Crystal casts Dark Missionary on Dengue Fever
+00:00:08.2180000		White Crystal casts Dark Missionary on Blue Fever
+00:00:08.2180000		White Crystal casts Dark Missionary on Cagnazzo Tarakona
+00:00:08.2180000		White Crystal casts Dark Missionary on Stone Wolf
+00:00:10.0440000		Cagnazzo Tarakona casts Ley Lines on Cagnazzo Tarakona
+00:00:10.0890000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:00:10.0890000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:00:10.0890000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:00:10.3570000		The limit break guage has been updated to 880. 3 bars are available
+00:00:12.2330000		Ramuh casts Judgment Volts on White Crystal
+00:00:12.2330000		Ramuh casts Judgment Volts on Angk H'zhet
+00:00:12.2330000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:00:12.2330000		Ramuh casts Judgment Volts on Super Negative
+00:00:12.2330000		Ramuh casts Judgment Volts on Moryn Ward
+00:00:12.2330000		Ramuh casts Judgment Volts on Dengue Fever
+00:00:12.2330000		Ramuh casts Judgment Volts on Stone Wolf
+00:00:12.2330000		Ramuh casts Judgment Volts on Blue Fever
+00:00:13.3020000		Blue Fever casts Refulgent Arrow on Ramuh
+00:00:13.3020000		Blue Fever casts Refulgent Arrow on Ramuh
+00:00:13.3020000		Blue Fever casts Refulgent Arrow on Ramuh
+00:00:13.3470000		The limit break guage has been updated to 1100. 3 bars are available
+00:00:16.3240000		The limit break guage has been updated to 1320. 3 bars are available
+00:00:19.3570000		The limit break guage has been updated to 1540. 3 bars are available
+00:00:22.3450000		The limit break guage has been updated to 1760. 3 bars are available
+00:00:25.3240000		The limit break guage has been updated to 1980. 3 bars are available
+00:00:25.6350000		Seraph casts Consolation on Moryn Ward
+00:00:25.6350000		Seraph casts Consolation on Cagnazzo Tarakona
+00:00:25.6350000		Seraph casts Consolation on Angk H'zhet
+00:00:25.6350000		Seraph casts Consolation on White Crystal
+00:00:25.6350000		Seraph casts Consolation on Super Negative
+00:00:25.6350000		Seraph casts Consolation on Blue Fever
+00:00:25.6350000		Seraph casts Consolation on Dengue Fever
+00:00:25.6350000		Seraph casts Consolation on Stone Wolf
+00:00:28.3500000		The limit break guage has been updated to 2200. 3 bars are available
+00:00:28.4830000		Seraph casts Consolation on Moryn Ward
+00:00:28.4830000		Seraph casts Consolation on Cagnazzo Tarakona
+00:00:28.4830000		Seraph casts Consolation on Angk H'zhet
+00:00:28.4830000		Seraph casts Consolation on White Crystal
+00:00:28.4830000		Seraph casts Consolation on Super Negative
+00:00:28.4830000		Seraph casts Consolation on Dengue Fever
+00:00:28.4830000		Seraph casts Consolation on Blue Fever
+00:00:28.4830000		Seraph casts Consolation on Stone Wolf
+00:00:29.1070000		Dengue Fever casts Medica II on Dengue Fever
+00:00:29.1070000		Dengue Fever casts Medica II on Angk H'zhet
+00:00:29.1070000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:00:29.1070000		Dengue Fever casts Medica II on White Crystal
+00:00:29.1070000		Dengue Fever casts Medica II on Stone Wolf
+00:00:29.1070000		Dengue Fever casts Medica II on Moryn Ward
+00:00:29.1070000		Dengue Fever casts Medica II on Super Negative
+00:00:29.1070000		Dengue Fever casts Medica II on Blue Fever
+00:00:31.3310000		The limit break guage has been updated to 2420. 3 bars are available
+00:00:34.3230000		The limit break guage has been updated to 2640. 3 bars are available
+00:00:37.2260000		Moryn Ward casts Shukuchi on Moryn Ward
+00:00:37.3600000		The limit break guage has been updated to 2860. 3 bars are available
+00:00:37.5820000		Cagnazzo Tarakona casts Between The Lines on Cagnazzo Tarakona
+00:00:38.9660000		Dengue Fever dies
+00:00:40.3520000		The limit break guage has been updated to 3080. 3 bars are available
+00:00:43.3440000		The limit break guage has been updated to 3300. 3 bars are available
+00:00:46.3340000		The limit break guage has been updated to 3520. 3 bars are available
+00:00:49.3670000		The limit break guage has been updated to 3740. 3 bars are available
+00:00:49.4110000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:00:51.1960000		Selene casts Whispering Dawn on Angk H'zhet
+00:00:51.1960000		Selene casts Whispering Dawn on White Crystal
+00:00:51.1960000		Selene casts Whispering Dawn on Moryn Ward
+00:00:51.1960000		Selene casts Whispering Dawn on Cagnazzo Tarakona
+00:00:51.1960000		Selene casts Whispering Dawn on Super Negative
+00:00:51.1960000		Selene casts Whispering Dawn on Dengue Fever
+00:00:52.3580000		The limit break guage has been updated to 3960. 3 bars are available
+00:00:55.3480000		The limit break guage has been updated to 4180. 3 bars are available
+00:00:56.1070000		Selene casts Fey Illumination on Angk H'zhet
+00:00:56.1070000		Selene casts Fey Illumination on Moryn Ward
+00:00:56.1070000		Selene casts Fey Illumination on White Crystal
+00:00:56.1070000		Selene casts Fey Illumination on Super Negative
+00:00:56.1070000		Selene casts Fey Illumination on Cagnazzo Tarakona
+00:00:58.3400000		The limit break guage has been updated to 4400. 3 bars are available
+00:00:59.3220000		Selene casts Fey Illumination on Super Negative
+00:00:59.3220000		Selene casts Fey Illumination on Angk H'zhet
+00:00:59.3220000		Selene casts Fey Illumination on Moryn Ward
+00:00:59.3220000		Selene casts Fey Illumination on Cagnazzo Tarakona
+00:01:01.3310000		The limit break guage has been updated to 4620. 3 bars are available
+00:01:03.6100000		Ramuh casts Judgment Volts on Super Negative
+00:01:03.6100000		Ramuh casts Judgment Volts on Angk H'zhet
+00:01:03.6100000		Ramuh casts Judgment Volts on Moryn Ward
+00:01:03.6100000		Ramuh casts Judgment Volts on Stone Wolf
+00:01:03.6100000		Ramuh casts Judgment Volts on White Crystal
+00:01:03.6100000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:01:03.6100000		Ramuh casts Judgment Volts on Dengue Fever
+00:01:03.6100000		Ramuh casts Judgment Volts on Blue Fever
+00:01:04.3240000		The limit break guage has been updated to 4840. 3 bars are available
+00:01:04.4130000		Selene casts Fey Blessing on Angk H'zhet
+00:01:04.4130000		Selene casts Fey Blessing on Moryn Ward
+00:01:04.4130000		Selene casts Fey Blessing on Cagnazzo Tarakona
+00:01:04.4130000		Selene casts Fey Blessing on Super Negative
+00:01:04.4130000		Selene casts Fey Blessing on White Crystal
+00:01:04.4130000		Selene casts Fey Blessing on Stone Wolf
+00:01:04.4130000		Selene casts Fey Blessing on Dengue Fever
+00:01:04.4130000		Selene casts Fey Blessing on Blue Fever
+00:01:06.6890000		Dengue Fever casts Assize on Dengue Fever
+00:01:06.6890000		Dengue Fever casts Assize on Ramuh
+00:01:06.6890000		Dengue Fever casts Assize on Super Negative
+00:01:06.6890000		Dengue Fever casts Assize on Stone Wolf
+00:01:06.6890000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:01:06.6890000		Dengue Fever casts Assize on Moryn Ward
+00:01:06.6890000		Dengue Fever casts Assize on White Crystal
+00:01:07.3590000		The limit break guage has been updated to 5060. 3 bars are available
+00:01:10.3530000		The limit break guage has been updated to 5280. 3 bars are available
+00:01:12.0070000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:01:12.0070000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:01:12.0070000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:01:13.2560000		The limit break guage has been updated to 5580. 3 bars are available
+00:01:13.3470000		The limit break guage has been updated to 5800. 3 bars are available
+00:01:13.6140000		Dengue Fever casts Medica II on Dengue Fever
+00:01:13.6140000		Dengue Fever casts Medica II on Super Negative
+00:01:13.6140000		Dengue Fever casts Medica II on Stone Wolf
+00:01:13.6140000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:01:13.6140000		Dengue Fever casts Medica II on Moryn Ward
+00:01:13.6140000		Dengue Fever casts Medica II on White Crystal
+00:01:13.6140000		Dengue Fever casts Medica II on Angk H'zhet
+00:01:13.6140000		Dengue Fever casts Medica II on Blue Fever
+00:01:16.3360000		The limit break guage has been updated to 6020. 3 bars are available
+00:01:18.2550000		Angk H'zhet casts Succor on Angk H'zhet
+00:01:18.2550000		Angk H'zhet casts Succor on Moryn Ward
+00:01:18.2550000		Angk H'zhet casts Succor on White Crystal
+00:01:18.2550000		Angk H'zhet casts Succor on Cagnazzo Tarakona
+00:01:18.2550000		Angk H'zhet casts Succor on Super Negative
+00:01:18.2550000		Angk H'zhet casts Succor on Stone Wolf
+00:01:19.3240000		The limit break guage has been updated to 6240. 3 bars are available
+00:01:22.3570000		The limit break guage has been updated to 6460. 3 bars are available
+00:01:25.0830000		Dengue Fever casts Asylum on Dengue Fever
+00:01:25.3510000		The limit break guage has been updated to 6680. 3 bars are available
+00:01:28.3440000		The limit break guage has been updated to 6900. 3 bars are available
+00:01:31.3300000		The limit break guage has been updated to 7120. 3 bars are available
+00:01:32.2680000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:01:32.2680000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:01:32.2680000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:01:32.2680000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:01:32.2680000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:01:32.2680000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:01:32.2680000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:01:32.2680000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:01:34.0060000		Angk H'zhet casts Succor on Angk H'zhet
+00:01:34.0060000		Angk H'zhet casts Succor on Blue Fever
+00:01:34.0060000		Angk H'zhet casts Succor on Moryn Ward
+00:01:34.0060000		Angk H'zhet casts Succor on Stone Wolf
+00:01:34.0060000		Angk H'zhet casts Succor on White Crystal
+00:01:34.0060000		Angk H'zhet casts Succor on Super Negative
+00:01:34.0060000		Angk H'zhet casts Succor on Dengue Fever
+00:01:34.3630000		The limit break guage has been updated to 7340. 3 bars are available
+00:01:35.1670000		Blue Fever casts Refulgent Arrow on Ramuh
+00:01:35.1670000		Blue Fever casts Refulgent Arrow on Ramuh
+00:01:35.1670000		Blue Fever casts Refulgent Arrow on Ramuh
+00:01:35.8830000		Ramuh casts Levinforce on Super Negative
+00:01:35.8830000		Ramuh casts Levinforce on White Crystal
+00:01:35.8830000		Ramuh casts Levinforce on Dengue Fever
+00:01:35.8830000		Ramuh casts Levinforce on Stone Wolf
+00:01:35.8830000		Ramuh casts Levinforce on Angk H'zhet
+00:01:35.8830000		Ramuh casts Levinforce on Blue Fever
+00:01:35.8830000		Ramuh casts Levinforce on Moryn Ward
+00:01:35.8830000		Ramuh casts Levinforce on Cagnazzo Tarakona
+00:01:37.3530000		The limit break guage has been updated to 7560. 3 bars are available
+00:01:40.3480000		The limit break guage has been updated to 7780. 3 bars are available
+00:01:43.3380000		The limit break guage has been updated to 8000. 3 bars are available
+00:01:46.3300000		The limit break guage has been updated to 8220. 3 bars are available
+00:01:49.3660000		The limit break guage has been updated to 8440. 3 bars are available
+00:01:52.3600000		The limit break guage has been updated to 8660. 3 bars are available
+00:01:52.6280000		Cagnazzo Tarakona casts Ley Lines on Cagnazzo Tarakona
+00:01:55.3520000		The limit break guage has been updated to 8880. 3 bars are available
+00:01:55.7530000		Cagnazzo Tarakona casts Between The Lines on Cagnazzo Tarakona
+00:01:58.3420000		The limit break guage has been updated to 9100. 3 bars are available
+00:02:01.3370000		The limit break guage has been updated to 9320. 3 bars are available
+00:02:04.3260000		The limit break guage has been updated to 9540. 3 bars are available
+00:02:06.4250000		Will Of Ramuh casts Deadly Discharge on Angk H'zhet
+00:02:06.4250000		Will Of Ramuh casts Deadly Discharge on Stone Wolf
+00:02:06.4250000		Will Of Ramuh casts Deadly Discharge on Blue Fever
+00:02:06.4250000		Will Of Ramuh casts Deadly Discharge on Moryn Ward
+00:02:06.4250000		Will Of Ramuh casts Deadly Discharge on Dengue Fever
+00:02:06.4250000		Will Of Ramuh casts Deadly Discharge on White Crystal
+00:02:06.4250000		Will Of Ramuh casts Deadly Discharge on Super Negative
+00:02:06.4250000		Will Of Ramuh casts Deadly Discharge on Cagnazzo Tarakona
+00:02:07.3630000		The limit break guage has been updated to 9760. 3 bars are available
+00:02:10.0030000		Cagnazzo Tarakona casts Between The Lines on Cagnazzo Tarakona
+00:02:10.3620000		The limit break guage has been updated to 9980. 3 bars are available
+00:02:10.8080000		Moryn Ward casts Shukuchi on Moryn Ward
+00:02:12.0140000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:02:12.0140000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:02:12.0140000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:02:12.0140000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:02:12.0140000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:02:12.0140000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:02:12.0140000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:02:12.0140000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:02:12.7760000		Dengue Fever casts Assize on Ramuh
+00:02:12.7760000		Dengue Fever casts Assize on Dengue Fever
+00:02:12.7760000		Dengue Fever casts Assize on Stone Wolf
+00:02:12.7760000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:02:12.7760000		Dengue Fever casts Assize on White Crystal
+00:02:12.7760000		Dengue Fever casts Assize on Super Negative
+00:02:12.7760000		Dengue Fever casts Assize on Moryn Ward
+00:02:12.7760000		Dengue Fever casts Assize on Angk H'zhet
+00:02:13.3580000		The limit break guage has been updated to 10200. 3 bars are available
+00:02:16.3520000		The limit break guage has been updated to 10420. 3 bars are available
+00:02:16.4850000		Dengue Fever casts Medica II on Dengue Fever
+00:02:16.4850000		Dengue Fever casts Medica II on Stone Wolf
+00:02:16.4850000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:02:16.4850000		Dengue Fever casts Medica II on White Crystal
+00:02:16.4850000		Dengue Fever casts Medica II on Super Negative
+00:02:16.4850000		Dengue Fever casts Medica II on Angk H'zhet
+00:02:16.4850000		Dengue Fever casts Medica II on Moryn Ward
+00:02:16.4850000		Dengue Fever casts Medica II on Blue Fever
+00:02:17.5560000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:02:17.5560000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:02:17.5560000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:02:19.3440000		The limit break guage has been updated to 10640. 3 bars are available
+00:02:20.3240000		Dengue Fever casts Medica II on Dengue Fever
+00:02:20.3240000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:02:20.3240000		Dengue Fever casts Medica II on White Crystal
+00:02:20.3240000		Dengue Fever casts Medica II on Angk H'zhet
+00:02:20.3240000		Dengue Fever casts Medica II on Stone Wolf
+00:02:20.3240000		Dengue Fever casts Medica II on Super Negative
+00:02:20.3240000		Dengue Fever casts Medica II on Moryn Ward
+00:02:20.3240000		Dengue Fever casts Medica II on Blue Fever
+00:02:22.3340000		The limit break guage has been updated to 10860. 3 bars are available
+00:02:25.3260000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:02:25.3260000		The limit break guage has been updated to 11080. 3 bars are available
+00:02:27.4220000		Selene casts Whispering Dawn on Super Negative
+00:02:27.4220000		Selene casts Whispering Dawn on Angk H'zhet
+00:02:27.4220000		Selene casts Whispering Dawn on White Crystal
+00:02:27.4220000		Selene casts Whispering Dawn on Moryn Ward
+00:02:27.4220000		Selene casts Whispering Dawn on Cagnazzo Tarakona
+00:02:27.4220000		Selene casts Whispering Dawn on Dengue Fever
+00:02:27.4220000		Selene casts Whispering Dawn on Stone Wolf
+00:02:27.4220000		Selene casts Whispering Dawn on Blue Fever
+00:02:28.3600000		The limit break guage has been updated to 11300. 3 bars are available
+00:02:28.7170000		Ramuh casts Judgment Volts on Super Negative
+00:02:28.7170000		Ramuh casts Judgment Volts on Moryn Ward
+00:02:28.7170000		Ramuh casts Judgment Volts on White Crystal
+00:02:28.7170000		Ramuh casts Judgment Volts on Angk H'zhet
+00:02:28.7170000		Ramuh casts Judgment Volts on Stone Wolf
+00:02:28.7170000		Ramuh casts Judgment Volts on Dengue Fever
+00:02:28.7170000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:02:28.7170000		Ramuh casts Judgment Volts on Blue Fever
+00:02:31.3490000		The limit break guage has been updated to 11520. 3 bars are available
+00:02:31.3930000		Angk H'zhet casts Succor on Angk H'zhet
+00:02:31.3930000		Angk H'zhet casts Succor on White Crystal
+00:02:31.3930000		Angk H'zhet casts Succor on Moryn Ward
+00:02:31.3930000		Angk H'zhet casts Succor on Dengue Fever
+00:02:31.3930000		Angk H'zhet casts Succor on Super Negative
+00:02:31.3930000		Angk H'zhet casts Succor on Cagnazzo Tarakona
+00:02:31.3930000		Angk H'zhet casts Succor on Stone Wolf
+00:02:31.3930000		Angk H'zhet casts Succor on Blue Fever
+00:02:33.1790000		White Crystal casts Salted Earth on White Crystal
+00:02:33.4010000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:02:33.4010000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:02:33.4010000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:02:33.4010000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:02:33.4010000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:02:33.4010000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:02:33.4010000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:02:33.4010000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:02:34.3380000		The limit break guage has been updated to 11740. 3 bars are available
+00:02:37.3290000		The limit break guage has been updated to 11960. 3 bars are available
+00:02:40.3230000		The limit break guage has been updated to 12180. 3 bars are available
+00:02:43.3560000		The limit break guage has been updated to 12400. 3 bars are available
+00:02:46.3480000		The limit break guage has been updated to 12620. 3 bars are available
+00:02:49.3420000		The limit break guage has been updated to 12840. 3 bars are available
+00:02:50.8110000		Stone Wolf casts Shake It Off on Stone Wolf
+00:02:50.8110000		Stone Wolf casts Shake It Off on Super Negative
+00:02:50.8110000		Stone Wolf casts Shake It Off on White Crystal
+00:02:50.8110000		Stone Wolf casts Shake It Off on Moryn Ward
+00:02:50.8110000		Stone Wolf casts Shake It Off on Dengue Fever
+00:02:52.3300000		The limit break guage has been updated to 13060. 3 bars are available
+00:02:55.1820000		Blue Fever casts Refulgent Arrow on Ramuh
+00:02:55.1820000		Blue Fever casts Refulgent Arrow on Ramuh
+00:02:55.1820000		Blue Fever casts Refulgent Arrow on Ramuh
+00:02:55.3600000		The limit break guage has been updated to 13280. 3 bars are available
+00:02:58.3430000		The limit break guage has been updated to 13500. 3 bars are available
+00:03:01.3250000		The limit break guage has been updated to 13720. 3 bars are available
+00:03:03.4610000		Dengue Fever casts Asylum on Dengue Fever
+00:03:04.3520000		The limit break guage has been updated to 13940. 3 bars are available
+00:03:05.4210000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:03:05.4210000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:03:05.4210000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:03:05.4210000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:03:05.4210000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:03:05.4210000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:03:05.4210000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:03:06.2240000		Dengue Fever casts Assize on Ramuh
+00:03:06.2240000		Dengue Fever casts Assize on Dengue Fever
+00:03:06.2240000		Dengue Fever casts Assize on Super Negative
+00:03:06.2240000		Dengue Fever casts Assize on Moryn Ward
+00:03:06.2240000		Dengue Fever casts Assize on Stone Wolf
+00:03:06.2240000		Dengue Fever casts Assize on White Crystal
+00:03:06.2240000		Dengue Fever casts Assize on Blue Fever
+00:03:06.2240000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:03:07.3390000		The limit break guage has been updated to 14160. 3 bars are available
+00:03:07.8290000		Blue Fever casts Battle Voice on Dengue Fever
+00:03:07.8290000		Blue Fever casts Battle Voice on Moryn Ward
+00:03:07.8290000		Blue Fever casts Battle Voice on Cagnazzo Tarakona
+00:03:07.8290000		Blue Fever casts Battle Voice on White Crystal
+00:03:07.8290000		Blue Fever casts Battle Voice on Super Negative
+00:03:07.8290000		Blue Fever casts Battle Voice on Stone Wolf
+00:03:07.8290000		Blue Fever casts Battle Voice on Angk H'zhet
+00:03:10.3650000		The limit break guage has been updated to 14380. 3 bars are available
+00:03:13.3350000		The limit break guage has been updated to 14600. 3 bars are available
+00:03:16.3510000		The limit break guage has been updated to 14820. 3 bars are available
+00:03:19.3240000		The limit break guage has been updated to 15040. 3 bars are available
+00:03:20.7890000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:03:20.7890000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:03:20.7890000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:03:22.3430000		The limit break guage has been updated to 15260. 3 bars are available
+00:03:25.3570000		The limit break guage has been updated to 15480. 3 bars are available
+00:03:28.3310000		The limit break guage has been updated to 15700. 3 bars are available
+00:03:31.3490000		The limit break guage has been updated to 15920. 3 bars are available
+00:03:34.3240000		The limit break guage has been updated to 16140. 3 bars are available
+00:03:37.3490000		The limit break guage has been updated to 16360. 3 bars are available
+00:03:37.6140000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:03:40.3650000		The limit break guage has been updated to 16580. 3 bars are available
+00:03:41.7400000		Ramuh casts Judgment Volts on Super Negative
+00:03:41.7400000		Ramuh casts Judgment Volts on Stone Wolf
+00:03:41.7400000		Ramuh casts Judgment Volts on White Crystal
+00:03:41.7400000		Ramuh casts Judgment Volts on Moryn Ward
+00:03:41.7400000		Ramuh casts Judgment Volts on Angk H'zhet
+00:03:41.7400000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:03:41.7400000		Ramuh casts Judgment Volts on Dengue Fever
+00:03:41.7400000		Ramuh casts Judgment Volts on Blue Fever
+00:03:43.3360000		The limit break guage has been updated to 16800. 3 bars are available
+00:03:45.2940000		Dengue Fever casts Medica II on Dengue Fever
+00:03:45.2940000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:03:45.2940000		Dengue Fever casts Medica II on Moryn Ward
+00:03:45.2940000		Dengue Fever casts Medica II on Super Negative
+00:03:45.2940000		Dengue Fever casts Medica II on Angk H'zhet
+00:03:45.2940000		Dengue Fever casts Medica II on Blue Fever
+00:03:45.2940000		Dengue Fever casts Medica II on White Crystal
+00:03:45.2940000		Dengue Fever casts Medica II on Stone Wolf
+00:03:46.3600000		The limit break guage has been updated to 17020. 3 bars are available
+00:03:49.3310000		The limit break guage has been updated to 17240. 3 bars are available
+00:03:52.3480000		The limit break guage has been updated to 17460. 3 bars are available
+00:03:54.5680000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:03:54.5680000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:03:54.5680000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:03:54.5680000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:03:54.5680000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:03:54.5680000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:03:54.5680000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:03:54.5680000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:03:55.3240000		The limit break guage has been updated to 17680. 3 bars are available
+00:03:55.4560000		Dengue Fever casts Assize on Dengue Fever
+00:03:55.4560000		Dengue Fever casts Assize on Ramuh
+00:03:55.4560000		Dengue Fever casts Assize on Super Negative
+00:03:55.4560000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:03:55.4560000		Dengue Fever casts Assize on White Crystal
+00:03:55.4560000		Dengue Fever casts Assize on Moryn Ward
+00:03:55.4560000		Dengue Fever casts Assize on Angk H'zhet
+00:03:55.4560000		Dengue Fever casts Assize on Blue Fever
+00:03:55.4560000		Dengue Fever casts Assize on Stone Wolf
+00:03:58.3400000		The limit break guage has been updated to 17900. 3 bars are available
+00:04:01.3660000		The limit break guage has been updated to 18120. 3 bars are available
+00:04:04.3410000		The limit break guage has been updated to 18340. 3 bars are available
+00:04:07.0970000		White Crystal casts Salted Earth on White Crystal
+00:04:07.3650000		The limit break guage has been updated to 18560. 3 bars are available
+00:04:08.7440000		White Crystal casts Dark Missionary on White Crystal
+00:04:08.7440000		White Crystal casts Dark Missionary on Moryn Ward
+00:04:08.7440000		White Crystal casts Dark Missionary on Angk H'zhet
+00:04:08.7440000		White Crystal casts Dark Missionary on Cagnazzo Tarakona
+00:04:08.7440000		White Crystal casts Dark Missionary on Dengue Fever
+00:04:08.7440000		White Crystal casts Dark Missionary on Super Negative
+00:04:08.7440000		White Crystal casts Dark Missionary on Blue Fever
+00:04:08.7440000		White Crystal casts Dark Missionary on Stone Wolf
+00:04:10.3430000		The limit break guage has been updated to 18780. 3 bars are available
+00:04:13.3630000		The limit break guage has been updated to 19000. 3 bars are available
+00:04:16.3380000		The limit break guage has been updated to 19220. 3 bars are available
+00:04:18.3740000		Blue Fever casts Refulgent Arrow on Ramuh
+00:04:18.3740000		Blue Fever casts Refulgent Arrow on Ramuh
+00:04:18.3740000		Blue Fever casts Refulgent Arrow on Ramuh
+00:04:19.3520000		The limit break guage has been updated to 19440. 3 bars are available
+00:04:22.3280000		The limit break guage has been updated to 19660. 3 bars are available
+00:04:22.9040000		The limit break guage has been updated to 19960. 3 bars are available
+00:04:22.9040000		Ramuh casts Centaur's Charge on White Crystal
+00:04:22.9040000		Ramuh casts Centaur's Charge on Angk H'zhet
+00:04:22.9040000		Ramuh casts Centaur's Charge on Dengue Fever
+00:04:22.9040000		Ramuh casts Centaur's Charge on Cagnazzo Tarakona
+00:04:22.9040000		Ramuh casts Centaur's Charge on Blue Fever
+00:04:22.9040000		Ramuh casts Centaur's Charge on Moryn Ward
+00:04:22.9040000		Ramuh casts Centaur's Charge on Super Negative
+00:04:22.9040000		Ramuh casts Centaur's Charge on Stone Wolf
+00:04:25.3430000		The limit break guage has been updated to 20180. 3 bars are available
+00:04:26.5860000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:04:26.5860000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:04:26.5860000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:04:26.5860000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:04:26.5860000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:04:26.5860000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:04:26.5860000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:04:26.5860000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:04:26.9410000		Angk H'zhet casts Indomitability on Angk H'zhet
+00:04:26.9410000		Angk H'zhet casts Indomitability on Dengue Fever
+00:04:26.9410000		Angk H'zhet casts Indomitability on Cagnazzo Tarakona
+00:04:26.9410000		Angk H'zhet casts Indomitability on Blue Fever
+00:04:26.9410000		Angk H'zhet casts Indomitability on Moryn Ward
+00:04:26.9410000		Angk H'zhet casts Indomitability on White Crystal
+00:04:26.9410000		Angk H'zhet casts Indomitability on Super Negative
+00:04:26.9410000		Angk H'zhet casts Indomitability on Stone Wolf
+00:04:28.3610000		The limit break guage has been updated to 20400. 3 bars are available
+00:04:29.2040000		Angk H'zhet casts Succor on Angk H'zhet
+00:04:29.2040000		Angk H'zhet casts Succor on Dengue Fever
+00:04:29.2040000		Angk H'zhet casts Succor on Stone Wolf
+00:04:29.2040000		Angk H'zhet casts Succor on Moryn Ward
+00:04:29.2040000		Angk H'zhet casts Succor on Blue Fever
+00:04:29.2040000		Angk H'zhet casts Succor on Super Negative
+00:04:29.2040000		Angk H'zhet casts Succor on Cagnazzo Tarakona
+00:04:29.2040000		Angk H'zhet casts Succor on White Crystal
+00:04:31.3350000		The limit break guage has been updated to 20620. 3 bars are available
+00:04:32.0020000		Dengue Fever casts Medica II on Dengue Fever
+00:04:32.0020000		Dengue Fever casts Medica II on White Crystal
+00:04:32.0020000		Dengue Fever casts Medica II on Super Negative
+00:04:32.0020000		Dengue Fever casts Medica II on Angk H'zhet
+00:04:32.0020000		Dengue Fever casts Medica II on Moryn Ward
+00:04:32.0020000		Dengue Fever casts Medica II on Blue Fever
+00:04:32.0020000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:04:32.0020000		Dengue Fever casts Medica II on Stone Wolf
+00:04:34.3510000		The limit break guage has been updated to 20840. 3 bars are available
+00:04:37.3260000		The limit break guage has been updated to 21060. 3 bars are available
+00:04:39.1440000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:04:39.1440000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:04:39.1440000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:04:40.3400000		The limit break guage has been updated to 21280. 3 bars are available
+00:04:43.3550000		The limit break guage has been updated to 21500. 3 bars are available
+00:04:46.3270000		The limit break guage has been updated to 21720. 3 bars are available
+00:04:49.3440000		The limit break guage has been updated to 21940. 3 bars are available
+00:04:52.3630000		Cagnazzo Tarakona casts Ley Lines on Cagnazzo Tarakona
+00:04:52.3630000		The limit break guage has been updated to 22160. 3 bars are available
+00:04:53.7370000		Dengue Fever casts Assize on Dengue Fever
+00:04:53.7370000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:04:53.7370000		Dengue Fever casts Assize on Ramuh
+00:04:53.7370000		Dengue Fever casts Assize on Super Negative
+00:04:53.7370000		Dengue Fever casts Assize on Stone Wolf
+00:04:53.7370000		Dengue Fever casts Assize on White Crystal
+00:04:55.3330000		The limit break guage has been updated to 22380. 3 bars are available
+00:04:57.5550000		Dengue Fever casts Medica II on Dengue Fever
+00:04:57.5550000		Dengue Fever casts Medica II on Super Negative
+00:04:57.5550000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:04:57.5550000		Dengue Fever casts Medica II on Stone Wolf
+00:04:57.5550000		Dengue Fever casts Medica II on White Crystal
+00:04:57.5550000		Dengue Fever casts Medica II on Moryn Ward
+00:04:58.3530000		The limit break guage has been updated to 22600. 3 bars are available
+00:04:59.1520000		Dengue Fever casts Asylum on Dengue Fever
+00:05:01.3260000		The limit break guage has been updated to 22820. 3 bars are available
+00:05:02.9240000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:05:04.3430000		The limit break guage has been updated to 23040. 3 bars are available
+00:05:06.4710000		Angk H'zhet casts Succor on Angk H'zhet
+00:05:06.4710000		Angk H'zhet casts Succor on Moryn Ward
+00:05:06.4710000		Angk H'zhet casts Succor on Blue Fever
+00:05:07.3580000		The limit break guage has been updated to 23260. 3 bars are available
+00:05:09.9360000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:05:09.9360000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:05:09.9360000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:05:09.9360000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:05:09.9360000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:05:09.9360000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:05:09.9360000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:05:10.3370000		The limit break guage has been updated to 23480. 3 bars are available
+00:05:12.8740000		Seraph casts Consolation on White Crystal
+00:05:12.8740000		Seraph casts Consolation on Moryn Ward
+00:05:12.8740000		Seraph casts Consolation on Stone Wolf
+00:05:12.8740000		Seraph casts Consolation on Super Negative
+00:05:12.8740000		Seraph casts Consolation on Dengue Fever
+00:05:12.8740000		Seraph casts Consolation on Cagnazzo Tarakona
+00:05:12.8740000		Seraph casts Consolation on Blue Fever
+00:05:12.8740000		Seraph casts Consolation on Angk H'zhet
+00:05:13.3630000		The limit break guage has been updated to 23700. 3 bars are available
+00:05:14.5620000		Stone Wolf casts Shake It Off on Stone Wolf
+00:05:14.5620000		Stone Wolf casts Shake It Off on White Crystal
+00:05:14.5620000		Stone Wolf casts Shake It Off on Dengue Fever
+00:05:14.5620000		Stone Wolf casts Shake It Off on Super Negative
+00:05:14.5620000		Stone Wolf casts Shake It Off on Moryn Ward
+00:05:14.5620000		Stone Wolf casts Shake It Off on Blue Fever
+00:05:14.5620000		Stone Wolf casts Shake It Off on Cagnazzo Tarakona
+00:05:16.3380000		The limit break guage has been updated to 23920. 3 bars are available
+00:05:16.6040000		Dengue Fever casts Medica II on Dengue Fever
+00:05:16.6040000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:05:16.6040000		Dengue Fever casts Medica II on Super Negative
+00:05:16.6040000		Dengue Fever casts Medica II on Stone Wolf
+00:05:16.6040000		Dengue Fever casts Medica II on White Crystal
+00:05:16.6040000		Dengue Fever casts Medica II on Moryn Ward
+00:05:16.6040000		Dengue Fever casts Medica II on Blue Fever
+00:05:17.9860000		Ramuh casts Judgment Volts on Super Negative
+00:05:17.9860000		Ramuh casts Judgment Volts on White Crystal
+00:05:17.9860000		Ramuh casts Judgment Volts on Moryn Ward
+00:05:17.9860000		Ramuh casts Judgment Volts on Stone Wolf
+00:05:17.9860000		Ramuh casts Judgment Volts on Blue Fever
+00:05:17.9860000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:05:17.9860000		Ramuh casts Judgment Volts on Dengue Fever
+00:05:17.9860000		Ramuh casts Judgment Volts on Angk H'zhet
+00:05:19.0960000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:05:19.0960000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:05:19.0960000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:05:19.0960000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:05:19.0960000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:05:19.0960000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:05:19.0960000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:05:19.0960000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:05:19.3630000		The limit break guage has been updated to 24140. 3 bars are available
+00:05:20.1170000		Seraph casts Consolation on White Crystal
+00:05:20.1170000		Seraph casts Consolation on Moryn Ward
+00:05:20.1170000		Seraph casts Consolation on Stone Wolf
+00:05:20.1170000		Seraph casts Consolation on Angk H'zhet
+00:05:20.1170000		Seraph casts Consolation on Super Negative
+00:05:20.1170000		Seraph casts Consolation on Dengue Fever
+00:05:20.1170000		Seraph casts Consolation on Blue Fever
+00:05:20.1170000		Seraph casts Consolation on Cagnazzo Tarakona
+00:05:20.1170000		Dengue Fever casts Plenary Indulgence on Dengue Fever
+00:05:20.1170000		Dengue Fever casts Plenary Indulgence on Cagnazzo Tarakona
+00:05:20.1170000		Dengue Fever casts Plenary Indulgence on Super Negative
+00:05:20.1170000		Dengue Fever casts Plenary Indulgence on White Crystal
+00:05:20.1170000		Dengue Fever casts Plenary Indulgence on Stone Wolf
+00:05:20.1170000		Dengue Fever casts Plenary Indulgence on Moryn Ward
+00:05:20.1170000		Dengue Fever casts Plenary Indulgence on Angk H'zhet
+00:05:20.1170000		Dengue Fever casts Plenary Indulgence on Blue Fever
+00:05:21.7620000		Angk H'zhet casts Succor on Angk H'zhet
+00:05:21.7620000		Angk H'zhet casts Succor on Moryn Ward
+00:05:21.7620000		Angk H'zhet casts Succor on Blue Fever
+00:05:21.7620000		Angk H'zhet casts Succor on White Crystal
+00:05:21.7620000		Angk H'zhet casts Succor on Stone Wolf
+00:05:21.7620000		Angk H'zhet casts Succor on Super Negative
+00:05:22.3390000		The limit break guage has been updated to 24360. 3 bars are available
+00:05:24.3830000		Dengue Fever casts Medica II on Dengue Fever
+00:05:24.3830000		Dengue Fever casts Medica II on Super Negative
+00:05:24.3830000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:05:24.3830000		Dengue Fever casts Medica II on White Crystal
+00:05:24.3830000		Dengue Fever casts Medica II on Stone Wolf
+00:05:24.3830000		Dengue Fever casts Medica II on Moryn Ward
+00:05:24.3830000		Dengue Fever casts Medica II on Blue Fever
+00:05:24.3830000		Dengue Fever casts Medica II on Angk H'zhet
+00:05:25.3620000		The limit break guage has been updated to 24580. 3 bars are available
+00:05:28.3420000		The limit break guage has been updated to 24800. 3 bars are available
+00:05:31.3640000		The limit break guage has been updated to 25020. 3 bars are available
+00:05:34.3410000		The limit break guage has been updated to 25240. 3 bars are available
+00:05:37.3600000		The limit break guage has been updated to 25460. 3 bars are available
+00:05:39.5860000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:05:39.5860000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:05:39.5860000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:05:40.3410000		The limit break guage has been updated to 25680. 3 bars are available
+00:05:42.2060000		Blue Fever casts Refulgent Arrow on Ramuh
+00:05:42.2060000		Blue Fever casts Refulgent Arrow on Ramuh
+00:05:42.2060000		Blue Fever casts Refulgent Arrow on Ramuh
+00:05:43.3620000		The limit break guage has been updated to 25900. 3 bars are available
+00:05:44.3390000		White Crystal casts Salted Earth on White Crystal
+00:05:45.3130000		Dengue Fever casts Assize on Dengue Fever
+00:05:45.3130000		Dengue Fever casts Assize on Ramuh
+00:05:45.3130000		Dengue Fever casts Assize on Super Negative
+00:05:45.3130000		Dengue Fever casts Assize on Stone Wolf
+00:05:45.3130000		Dengue Fever casts Assize on White Crystal
+00:05:45.3130000		Dengue Fever casts Assize on Moryn Ward
+00:05:46.3350000		The limit break guage has been updated to 26120. 3 bars are available
+00:05:49.3550000		The limit break guage has been updated to 26340. 3 bars are available
+00:05:52.3250000		The limit break guage has been updated to 26560. 3 bars are available
+00:05:55.3420000		The limit break guage has been updated to 26780. 3 bars are available
+00:05:58.0530000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:05:58.0530000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:05:58.0530000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:05:58.0530000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:05:58.3640000		The limit break guage has been updated to 27000. 3 bars are available
+00:06:01.3390000		The limit break guage has been updated to 27220. 3 bars are available
+00:06:04.3580000		The limit break guage has been updated to 27440. 3 bars are available
+00:06:07.3310000		The limit break guage has been updated to 27660. 3 bars are available
+00:06:10.3510000		The limit break guage has been updated to 27880. 3 bars are available
+00:06:10.6630000		Dengue Fever casts Medica II on Dengue Fever
+00:06:10.6630000		Dengue Fever casts Medica II on Super Negative
+00:06:10.6630000		Dengue Fever casts Medica II on Stone Wolf
+00:06:10.6630000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:06:10.6630000		Dengue Fever casts Medica II on Moryn Ward
+00:06:10.6630000		Dengue Fever casts Medica II on White Crystal
+00:06:11.7310000		Selene casts Fey Blessing on White Crystal
+00:06:11.7310000		Selene casts Fey Blessing on Stone Wolf
+00:06:11.7310000		Selene casts Fey Blessing on Super Negative
+00:06:11.7310000		Selene casts Fey Blessing on Moryn Ward
+00:06:11.7310000		Selene casts Fey Blessing on Blue Fever
+00:06:11.7310000		Selene casts Fey Blessing on Angk H'zhet
+00:06:11.7310000		Selene casts Fey Blessing on Dengue Fever
+00:06:11.7310000		Selene casts Fey Blessing on Cagnazzo Tarakona
+00:06:12.0430000		Blue Fever casts Battle Voice on Angk H'zhet
+00:06:12.0430000		Blue Fever casts Battle Voice on White Crystal
+00:06:12.0430000		Blue Fever casts Battle Voice on Moryn Ward
+00:06:12.0430000		Blue Fever casts Battle Voice on Stone Wolf
+00:06:12.0430000		Blue Fever casts Battle Voice on Super Negative
+00:06:12.0430000		Blue Fever casts Battle Voice on Dengue Fever
+00:06:12.0430000		Blue Fever casts Battle Voice on Cagnazzo Tarakona
+00:06:12.3530000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:06:12.3530000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:06:12.3530000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:06:12.3530000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:06:12.3530000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:06:12.3530000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:06:12.3530000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:06:12.3530000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:06:13.3300000		The limit break guage has been updated to 28100. 3 bars are available
+00:06:13.9970000		Angk H'zhet casts Succor on Angk H'zhet
+00:06:13.9970000		Angk H'zhet casts Succor on Moryn Ward
+00:06:13.9970000		Angk H'zhet casts Succor on White Crystal
+00:06:13.9970000		Angk H'zhet casts Succor on Blue Fever
+00:06:13.9970000		Angk H'zhet casts Succor on Dengue Fever
+00:06:13.9970000		Angk H'zhet casts Succor on Stone Wolf
+00:06:13.9970000		Angk H'zhet casts Succor on Super Negative
+00:06:16.3500000		The limit break guage has been updated to 28320. 3 bars are available
+00:06:19.3310000		The limit break guage has been updated to 28540. 3 bars are available
+00:06:22.3530000		The limit break guage has been updated to 28760. 3 bars are available
+00:06:25.3280000		The limit break guage has been updated to 28980. 3 bars are available
+00:06:26.5730000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:06:28.3510000		The limit break guage has been updated to 29200. 3 bars are available
+00:06:28.8830000		Ramuh casts Judgment Volts on White Crystal
+00:06:28.8830000		Ramuh casts Judgment Volts on Stone Wolf
+00:06:28.8830000		Ramuh casts Judgment Volts on Super Negative
+00:06:28.8830000		Ramuh casts Judgment Volts on Moryn Ward
+00:06:28.8830000		Ramuh casts Judgment Volts on Angk H'zhet
+00:06:28.8830000		Ramuh casts Judgment Volts on Dengue Fever
+00:06:28.8830000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:06:28.8830000		Ramuh casts Judgment Volts on Blue Fever
+00:06:30.8810000		Selene casts Whispering Dawn on White Crystal
+00:06:30.8810000		Selene casts Whispering Dawn on Stone Wolf
+00:06:30.8810000		Selene casts Whispering Dawn on Moryn Ward
+00:06:30.8810000		Selene casts Whispering Dawn on Angk H'zhet
+00:06:30.8810000		Selene casts Whispering Dawn on Super Negative
+00:06:30.8810000		Selene casts Whispering Dawn on Dengue Fever
+00:06:30.8810000		Selene casts Whispering Dawn on Cagnazzo Tarakona
+00:06:30.8810000		Selene casts Whispering Dawn on Blue Fever
+00:06:31.3240000		The limit break guage has been updated to 29420. 3 bars are available
+00:06:31.4580000		Angk H'zhet casts Indomitability on Angk H'zhet
+00:06:31.4580000		Angk H'zhet casts Indomitability on Moryn Ward
+00:06:31.4580000		Angk H'zhet casts Indomitability on White Crystal
+00:06:31.4580000		Angk H'zhet casts Indomitability on Dengue Fever
+00:06:31.4580000		Angk H'zhet casts Indomitability on Blue Fever
+00:06:31.4580000		Angk H'zhet casts Indomitability on Cagnazzo Tarakona
+00:06:31.4580000		Angk H'zhet casts Indomitability on Super Negative
+00:06:31.4580000		Angk H'zhet casts Indomitability on Stone Wolf
+00:06:33.1890000		Dengue Fever casts Medica II on Dengue Fever
+00:06:33.1890000		Dengue Fever casts Medica II on Moryn Ward
+00:06:33.1890000		Dengue Fever casts Medica II on White Crystal
+00:06:33.1890000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:06:33.1890000		Dengue Fever casts Medica II on Angk H'zhet
+00:06:33.1890000		Dengue Fever casts Medica II on Blue Fever
+00:06:33.1890000		Dengue Fever casts Medica II on Super Negative
+00:06:33.1890000		Dengue Fever casts Medica II on Stone Wolf
+00:06:34.3430000		The limit break guage has been updated to 29640. 3 bars are available
+00:06:35.4060000		Dengue Fever casts Assize on Dengue Fever
+00:06:35.4060000		Dengue Fever casts Assize on Ramuh
+00:06:35.4060000		Dengue Fever casts Assize on Moryn Ward
+00:06:35.4060000		Dengue Fever casts Assize on White Crystal
+00:06:35.4060000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:06:35.4060000		Dengue Fever casts Assize on Blue Fever
+00:06:35.4060000		Dengue Fever casts Assize on Angk H'zhet
+00:06:35.4060000		Dengue Fever casts Assize on Super Negative
+00:06:35.4060000		Dengue Fever casts Assize on Stone Wolf
+00:06:37.3600000		The limit break guage has been updated to 29860. 3 bars are available
+00:06:40.3330000		The limit break guage has been updated to 30000. 3 bars are available
+00:06:42.0660000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:06:42.0660000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:06:42.0660000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:06:58.4990000		White Crystal casts Dark Missionary on White Crystal
+00:06:58.4990000		White Crystal casts Dark Missionary on Moryn Ward
+00:06:58.4990000		White Crystal casts Dark Missionary on Cagnazzo Tarakona
+00:06:58.4990000		White Crystal casts Dark Missionary on Dengue Fever
+00:06:58.4990000		White Crystal casts Dark Missionary on Angk H'zhet
+00:06:58.4990000		White Crystal casts Dark Missionary on Super Negative
+00:06:58.4990000		White Crystal casts Dark Missionary on Blue Fever
+00:06:58.4990000		White Crystal casts Dark Missionary on Stone Wolf
+00:07:07.8250000		Blue Fever casts Refulgent Arrow on Ramuh
+00:07:07.8250000		Blue Fever casts Refulgent Arrow on Ramuh
+00:07:07.8250000		Blue Fever casts Refulgent Arrow on Ramuh
+00:07:10.1310000		Ramuh casts Centaur's Charge on White Crystal
+00:07:10.1310000		Ramuh casts Centaur's Charge on Angk H'zhet
+00:07:10.1310000		Ramuh casts Centaur's Charge on Dengue Fever
+00:07:10.1310000		Ramuh casts Centaur's Charge on Cagnazzo Tarakona
+00:07:10.1310000		Ramuh casts Centaur's Charge on Blue Fever
+00:07:10.1310000		Ramuh casts Centaur's Charge on Moryn Ward
+00:07:10.1310000		Ramuh casts Centaur's Charge on Super Negative
+00:07:10.1310000		Ramuh casts Centaur's Charge on Stone Wolf
+00:07:14.3930000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:07:14.3930000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:07:14.3930000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:07:14.3930000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:07:14.3930000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:07:14.3930000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:07:14.3930000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:07:14.3930000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:07:14.8370000		Angk H'zhet casts Indomitability on Angk H'zhet
+00:07:14.8370000		Angk H'zhet casts Indomitability on Stone Wolf
+00:07:14.8370000		Angk H'zhet casts Indomitability on Dengue Fever
+00:07:14.8370000		Angk H'zhet casts Indomitability on Cagnazzo Tarakona
+00:07:14.8370000		Angk H'zhet casts Indomitability on Blue Fever
+00:07:14.8370000		Angk H'zhet casts Indomitability on Super Negative
+00:07:14.8370000		Angk H'zhet casts Indomitability on White Crystal
+00:07:14.8370000		Angk H'zhet casts Indomitability on Moryn Ward
+00:07:17.0610000		Angk H'zhet casts Succor on Angk H'zhet
+00:07:17.0610000		Angk H'zhet casts Succor on Cagnazzo Tarakona
+00:07:17.0610000		Angk H'zhet casts Succor on Stone Wolf
+00:07:17.0610000		Angk H'zhet casts Succor on Blue Fever
+00:07:17.0610000		Angk H'zhet casts Succor on Super Negative
+00:07:17.0610000		Angk H'zhet casts Succor on Moryn Ward
+00:07:17.0610000		Angk H'zhet casts Succor on White Crystal
+00:07:17.0610000		Angk H'zhet casts Succor on Dengue Fever
+00:07:17.5080000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:07:17.5080000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:07:17.5080000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:07:17.5080000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:07:17.5080000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:07:17.5080000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:07:17.5080000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:07:17.5080000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:07:25.7200000		Dengue Fever casts Assize on Dengue Fever
+00:07:25.7200000		Dengue Fever casts Assize on Ramuh
+00:07:25.7200000		Dengue Fever casts Assize on Stone Wolf
+00:07:25.7200000		Dengue Fever casts Assize on White Crystal
+00:07:25.7200000		Dengue Fever casts Assize on Moryn Ward
+00:07:25.7200000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:07:25.7200000		Dengue Fever casts Assize on Angk H'zhet
+00:07:27.8050000		Super Negative dies
+00:07:28.6020000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:07:29.4470000		Dengue Fever casts Medica II on Dengue Fever
+00:07:29.4470000		Dengue Fever casts Medica II on Stone Wolf
+00:07:29.4470000		Dengue Fever casts Medica II on Angk H'zhet
+00:07:29.4470000		Dengue Fever casts Medica II on White Crystal
+00:07:30.7760000		Angk H'zhet casts Succor on Angk H'zhet
+00:07:30.7760000		Angk H'zhet casts Succor on White Crystal
+00:07:30.7760000		Angk H'zhet casts Succor on Cagnazzo Tarakona
+00:07:30.7760000		Angk H'zhet casts Succor on Blue Fever
+00:07:30.7760000		Angk H'zhet casts Succor on Stone Wolf
+00:07:30.7760000		Angk H'zhet casts Succor on Moryn Ward
+00:07:30.7760000		Angk H'zhet casts Succor on Dengue Fever
+00:07:31.0870000		Ramuh casts Judgment Volts on Moryn Ward
+00:07:31.0870000		Ramuh casts Judgment Volts on White Crystal
+00:07:31.0870000		Ramuh casts Judgment Volts on Angk H'zhet
+00:07:31.0870000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:07:31.0870000		Ramuh casts Judgment Volts on Dengue Fever
+00:07:31.0870000		Ramuh casts Judgment Volts on Blue Fever
+00:07:31.0870000		Ramuh casts Judgment Volts on Stone Wolf
+00:07:33.9270000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:07:33.9270000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:07:33.9270000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:07:33.9270000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:07:33.9270000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:07:33.9270000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:07:44.0600000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:07:44.0600000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:07:44.0600000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:07:48.6300000		Dengue Fever casts Asylum on Dengue Fever
+00:07:52.6240000		Dengue Fever casts Medica II on Dengue Fever
+00:07:52.6240000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:07:52.6240000		Dengue Fever casts Medica II on White Crystal
+00:07:52.6240000		Dengue Fever casts Medica II on Super Negative
+00:07:52.6240000		Dengue Fever casts Medica II on Stone Wolf
+00:07:52.6240000		Dengue Fever casts Medica II on Angk H'zhet
+00:07:52.6240000		Dengue Fever casts Medica II on Moryn Ward
+00:07:54.0010000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:07:54.0010000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:07:54.0010000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:07:54.0010000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:07:54.0010000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:07:54.0010000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:07:54.0010000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:07:54.0010000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:07:54.5800000		Angk H'zhet casts Succor on Angk H'zhet
+00:07:54.5800000		Angk H'zhet casts Succor on Blue Fever
+00:07:54.5800000		Angk H'zhet casts Succor on Super Negative
+00:07:54.5800000		Angk H'zhet casts Succor on Moryn Ward
+00:07:54.5800000		Angk H'zhet casts Succor on Stone Wolf
+00:07:54.5800000		Angk H'zhet casts Succor on White Crystal
+00:07:54.5800000		Angk H'zhet casts Succor on Dengue Fever
+00:07:57.1130000		Ramuh casts Levinforce on White Crystal
+00:07:57.1130000		Ramuh casts Levinforce on Dengue Fever
+00:07:57.1130000		Ramuh casts Levinforce on Super Negative
+00:07:57.1130000		Ramuh casts Levinforce on Stone Wolf
+00:07:57.1130000		Ramuh casts Levinforce on Blue Fever
+00:07:57.1130000		Ramuh casts Levinforce on Angk H'zhet
+00:07:57.1130000		Ramuh casts Levinforce on Moryn Ward
+00:07:57.1130000		Ramuh casts Levinforce on Cagnazzo Tarakona
+00:08:00.0420000		White Crystal casts Salted Earth on White Crystal
+00:08:04.9300000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:08:07.5020000		Dengue Fever casts Medica II on Dengue Fever
+00:08:07.5020000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:08:07.5020000		Dengue Fever casts Medica II on White Crystal
+00:08:07.5020000		Dengue Fever casts Medica II on Stone Wolf
+00:08:07.5020000		Dengue Fever casts Medica II on Super Negative
+00:08:07.5020000		Dengue Fever casts Medica II on Blue Fever
+00:08:07.5020000		Dengue Fever casts Medica II on Angk H'zhet
+00:08:07.5020000		Dengue Fever casts Medica II on Moryn Ward
+00:08:08.0800000		Ramuh casts Judgment Volts on White Crystal
+00:08:08.0800000		Ramuh casts Judgment Volts on Super Negative
+00:08:08.0800000		Ramuh casts Judgment Volts on Stone Wolf
+00:08:08.0800000		Ramuh casts Judgment Volts on Blue Fever
+00:08:08.0800000		Ramuh casts Judgment Volts on Angk H'zhet
+00:08:08.0800000		Ramuh casts Judgment Volts on Dengue Fever
+00:08:08.0800000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:08:08.0800000		Ramuh casts Judgment Volts on Moryn Ward
+00:08:10.7920000		Dengue Fever casts Assize on Dengue Fever
+00:08:10.7920000		Dengue Fever casts Assize on Ramuh
+00:08:10.7920000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:08:10.7920000		Dengue Fever casts Assize on White Crystal
+00:08:10.7920000		Dengue Fever casts Assize on Super Negative
+00:08:10.7920000		Dengue Fever casts Assize on Stone Wolf
+00:08:10.7920000		Dengue Fever casts Assize on Blue Fever
+00:08:10.7920000		Dengue Fever casts Assize on Angk H'zhet
+00:08:10.7920000		Dengue Fever casts Assize on Moryn Ward
+00:08:11.6350000		Selene casts Fey Blessing on White Crystal
+00:08:11.6350000		Selene casts Fey Blessing on Super Negative
+00:08:11.6350000		Selene casts Fey Blessing on Blue Fever
+00:08:11.6350000		Selene casts Fey Blessing on Angk H'zhet
+00:08:11.6350000		Selene casts Fey Blessing on Stone Wolf
+00:08:11.6350000		Selene casts Fey Blessing on Dengue Fever
+00:08:11.6350000		Selene casts Fey Blessing on Moryn Ward
+00:08:11.6350000		Selene casts Fey Blessing on Cagnazzo Tarakona
+00:08:16.7550000		Cagnazzo Tarakona casts Ley Lines on Cagnazzo Tarakona
+00:08:23.6690000		Dengue Fever casts Plenary Indulgence on Dengue Fever
+00:08:23.6690000		Dengue Fever casts Plenary Indulgence on Cagnazzo Tarakona
+00:08:23.6690000		Dengue Fever casts Plenary Indulgence on Super Negative
+00:08:23.6690000		Dengue Fever casts Plenary Indulgence on White Crystal
+00:08:23.6690000		Dengue Fever casts Plenary Indulgence on Stone Wolf
+00:08:23.6690000		Dengue Fever casts Plenary Indulgence on Moryn Ward
+00:08:23.6690000		Dengue Fever casts Plenary Indulgence on Blue Fever
+00:08:23.6690000		Dengue Fever casts Plenary Indulgence on Angk H'zhet
+00:08:26.4250000		Dengue Fever casts Medica II on Dengue Fever
+00:08:26.4250000		Dengue Fever casts Medica II on Super Negative
+00:08:26.4250000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:08:26.4250000		Dengue Fever casts Medica II on White Crystal
+00:08:26.4250000		Dengue Fever casts Medica II on Stone Wolf
+00:08:26.4250000		Dengue Fever casts Medica II on Moryn Ward
+00:08:26.4250000		Dengue Fever casts Medica II on Blue Fever
+00:08:26.4250000		Dengue Fever casts Medica II on Angk H'zhet
+00:08:35.4070000		Blue Fever casts Refulgent Arrow on Ramuh
+00:08:35.4070000		Blue Fever casts Refulgent Arrow on Ramuh
+00:08:35.4070000		Blue Fever casts Refulgent Arrow on Ramuh
+00:08:36.7410000		White Crystal casts Dark Missionary on White Crystal
+00:08:36.7410000		White Crystal casts Dark Missionary on Stone Wolf
+00:08:36.7410000		White Crystal casts Dark Missionary on Dengue Fever
+00:08:36.7410000		White Crystal casts Dark Missionary on Super Negative
+00:08:36.7410000		White Crystal casts Dark Missionary on Cagnazzo Tarakona
+00:08:36.7410000		White Crystal casts Dark Missionary on Blue Fever
+00:08:36.7410000		White Crystal casts Dark Missionary on Moryn Ward
+00:08:36.7410000		White Crystal casts Dark Missionary on Angk H'zhet
+00:08:37.4090000		Seraph casts Consolation on Super Negative
+00:08:37.4090000		Seraph casts Consolation on Stone Wolf
+00:08:37.4090000		Seraph casts Consolation on White Crystal
+00:08:37.4090000		Seraph casts Consolation on Dengue Fever
+00:08:37.4090000		Seraph casts Consolation on Moryn Ward
+00:08:37.4090000		Seraph casts Consolation on Cagnazzo Tarakona
+00:08:37.4090000		Seraph casts Consolation on Blue Fever
+00:08:37.4090000		Seraph casts Consolation on Angk H'zhet
+00:08:41.7260000		Stone Wolf casts Shake It Off on Stone Wolf
+00:08:41.7260000		Stone Wolf casts Shake It Off on White Crystal
+00:08:41.7260000		Stone Wolf casts Shake It Off on Dengue Fever
+00:08:41.7260000		Stone Wolf casts Shake It Off on Blue Fever
+00:08:41.7260000		Stone Wolf casts Shake It Off on Super Negative
+00:08:41.7260000		Stone Wolf casts Shake It Off on Moryn Ward
+00:08:41.7260000		Stone Wolf casts Shake It Off on Cagnazzo Tarakona
+00:08:42.6620000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:08:43.9970000		Ramuh casts Judgment Volts on Super Negative
+00:08:43.9970000		Ramuh casts Judgment Volts on Stone Wolf
+00:08:43.9970000		Ramuh casts Judgment Volts on White Crystal
+00:08:43.9970000		Ramuh casts Judgment Volts on Moryn Ward
+00:08:43.9970000		Ramuh casts Judgment Volts on Angk H'zhet
+00:08:43.9970000		Ramuh casts Judgment Volts on Dengue Fever
+00:08:43.9970000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:08:43.9970000		Ramuh casts Judgment Volts on Blue Fever
+00:08:44.7510000		Seraph casts Consolation on Super Negative
+00:08:44.7510000		Seraph casts Consolation on Stone Wolf
+00:08:44.7510000		Seraph casts Consolation on White Crystal
+00:08:44.7510000		Seraph casts Consolation on Moryn Ward
+00:08:44.7510000		Seraph casts Consolation on Angk H'zhet
+00:08:44.7510000		Seraph casts Consolation on Dengue Fever
+00:08:44.7510000		Seraph casts Consolation on Cagnazzo Tarakona
+00:08:44.7510000		Seraph casts Consolation on Blue Fever
+00:08:44.8840000		Dengue Fever casts Medica II on Dengue Fever
+00:08:44.8840000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:08:44.8840000		Dengue Fever casts Medica II on Super Negative
+00:08:44.8840000		Dengue Fever casts Medica II on White Crystal
+00:08:44.8840000		Dengue Fever casts Medica II on Stone Wolf
+00:08:44.8840000		Dengue Fever casts Medica II on Moryn Ward
+00:08:44.8840000		Dengue Fever casts Medica II on Angk H'zhet
+00:08:44.8840000		Dengue Fever casts Medica II on Blue Fever
+00:08:46.3070000		Angk H'zhet casts Succor on Angk H'zhet
+00:08:46.3070000		Angk H'zhet casts Succor on Moryn Ward
+00:08:46.3070000		Angk H'zhet casts Succor on Super Negative
+00:08:46.3070000		Angk H'zhet casts Succor on Blue Fever
+00:08:46.3070000		Angk H'zhet casts Succor on Stone Wolf
+00:08:46.3070000		Angk H'zhet casts Succor on White Crystal
+00:08:46.3070000		Angk H'zhet casts Succor on Dengue Fever
+00:08:46.7510000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:08:46.7510000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:08:46.7510000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:08:46.7510000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:08:46.7510000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:08:46.7510000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:08:46.7510000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:08:46.7510000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:08:47.9050000		Seraph casts Consolation on Super Negative
+00:08:47.9050000		Seraph casts Consolation on Dengue Fever
+00:08:47.9050000		Seraph casts Consolation on Stone Wolf
+00:08:47.9050000		Seraph casts Consolation on White Crystal
+00:08:47.9050000		Seraph casts Consolation on Moryn Ward
+00:08:47.9050000		Seraph casts Consolation on Cagnazzo Tarakona
+00:08:47.9050000		Seraph casts Consolation on Blue Fever
+00:08:47.9050000		Seraph casts Consolation on Angk H'zhet
+00:08:48.1720000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:08:48.1720000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:08:48.1720000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:08:56.5750000		Angk H'zhet casts Succor on Angk H'zhet
+00:08:56.5750000		Angk H'zhet casts Succor on Moryn Ward
+00:08:56.5750000		Angk H'zhet casts Succor on Blue Fever
+00:08:56.5750000		Angk H'zhet casts Succor on Super Negative
+00:08:56.5750000		Angk H'zhet casts Succor on Stone Wolf
+00:08:56.5750000		Angk H'zhet casts Succor on White Crystal
+00:08:56.5750000		Angk H'zhet casts Succor on Dengue Fever
+00:08:56.5750000		Angk H'zhet casts Succor on Cagnazzo Tarakona
+00:09:04.8380000		Dengue Fever casts Assize on Dengue Fever
+00:09:04.8380000		Dengue Fever casts Assize on Ramuh
+00:09:04.8380000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:09:04.8380000		Dengue Fever casts Assize on Super Negative
+00:09:04.8380000		Dengue Fever casts Assize on White Crystal
+00:09:04.8380000		Dengue Fever casts Assize on Moryn Ward
+00:09:04.8380000		Dengue Fever casts Assize on Stone Wolf
+00:09:04.8380000		Dengue Fever casts Assize on Blue Fever
+00:09:12.9680000		Dengue Fever casts Medica II on Dengue Fever
+00:09:12.9680000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:09:12.9680000		Dengue Fever casts Medica II on Moryn Ward
+00:09:12.9680000		Dengue Fever casts Medica II on Blue Fever
+00:09:12.9680000		Dengue Fever casts Medica II on Angk H'zhet
+00:09:12.9680000		Dengue Fever casts Medica II on White Crystal
+00:09:12.9680000		Dengue Fever casts Medica II on Stone Wolf
+00:09:12.9680000		Dengue Fever casts Medica II on Super Negative
+00:09:13.4120000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:09:13.8110000		Blue Fever casts Battle Voice on Dengue Fever
+00:09:13.8110000		Blue Fever casts Battle Voice on Cagnazzo Tarakona
+00:09:13.8110000		Blue Fever casts Battle Voice on Moryn Ward
+00:09:13.8110000		Blue Fever casts Battle Voice on Angk H'zhet
+00:09:13.8110000		Blue Fever casts Battle Voice on Super Negative
+00:09:13.8110000		Blue Fever casts Battle Voice on White Crystal
+00:09:13.8110000		Blue Fever casts Battle Voice on Stone Wolf
+00:09:15.7650000		Ramuh casts Judgment Volts on Super Negative
+00:09:15.7650000		Ramuh casts Judgment Volts on White Crystal
+00:09:15.7650000		Ramuh casts Judgment Volts on Angk H'zhet
+00:09:15.7650000		Ramuh casts Judgment Volts on Moryn Ward
+00:09:15.7650000		Ramuh casts Judgment Volts on Stone Wolf
+00:09:15.7650000		Ramuh casts Judgment Volts on Dengue Fever
+00:09:15.7650000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:09:15.7650000		Ramuh casts Judgment Volts on Blue Fever
+00:09:17.1400000		Angk H'zhet casts Succor on Angk H'zhet
+00:09:17.1400000		Angk H'zhet casts Succor on White Crystal
+00:09:17.1400000		Angk H'zhet casts Succor on Super Negative
+00:09:17.1400000		Angk H'zhet casts Succor on Dengue Fever
+00:09:17.1400000		Angk H'zhet casts Succor on Stone Wolf
+00:09:17.1400000		Angk H'zhet casts Succor on Cagnazzo Tarakona
+00:09:17.1400000		Angk H'zhet casts Succor on Moryn Ward
+00:09:17.1400000		Angk H'zhet casts Succor on Blue Fever
+00:09:19.6680000		Selene casts Whispering Dawn on Super Negative
+00:09:19.6680000		Selene casts Whispering Dawn on White Crystal
+00:09:19.6680000		Selene casts Whispering Dawn on Angk H'zhet
+00:09:19.6680000		Selene casts Whispering Dawn on Stone Wolf
+00:09:19.6680000		Selene casts Whispering Dawn on Cagnazzo Tarakona
+00:09:19.6680000		Selene casts Whispering Dawn on Moryn Ward
+00:09:19.6680000		Selene casts Whispering Dawn on Dengue Fever
+00:09:19.6680000		Selene casts Whispering Dawn on Blue Fever
+00:09:19.9800000		Dengue Fever casts Asylum on Dengue Fever
+00:09:20.7830000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:09:20.7830000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:09:20.7830000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:09:20.7830000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:09:20.7830000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:09:20.7830000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:09:20.7830000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:09:20.7830000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:09:22.0330000		The limit break guage has been updated to 0. 3 bars are available
+00:09:22.7450000		Selene casts Fey Illumination on Super Negative
+00:09:22.7450000		Selene casts Fey Illumination on Angk H'zhet
+00:09:22.7450000		Selene casts Fey Illumination on White Crystal
+00:09:22.7450000		Selene casts Fey Illumination on Stone Wolf
+00:09:22.7450000		Selene casts Fey Illumination on Dengue Fever
+00:09:22.7450000		Selene casts Fey Illumination on Cagnazzo Tarakona
+00:09:22.7450000		Selene casts Fey Illumination on Moryn Ward
+00:09:22.7450000		Selene casts Fey Illumination on Blue Fever
+00:09:25.0150000		The limit break guage has been updated to 220. 3 bars are available
+00:09:26.9240000		Ramuh casts Judgment Volts on Super Negative
+00:09:26.9240000		Ramuh casts Judgment Volts on Dengue Fever
+00:09:26.9240000		Ramuh casts Judgment Volts on Angk H'zhet
+00:09:26.9240000		Ramuh casts Judgment Volts on White Crystal
+00:09:26.9240000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:09:26.9240000		Ramuh casts Judgment Volts on Stone Wolf
+00:09:26.9240000		Ramuh casts Judgment Volts on Moryn Ward
+00:09:26.9240000		Ramuh casts Judgment Volts on Blue Fever
+00:09:27.9920000		The limit break guage has been updated to 440. 3 bars are available
+00:09:28.7020000		Dengue Fever casts Medica II on Dengue Fever
+00:09:28.7020000		Dengue Fever casts Medica II on Moryn Ward
+00:09:28.7020000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:09:28.7020000		Dengue Fever casts Medica II on Super Negative
+00:09:28.7020000		Dengue Fever casts Medica II on Blue Fever
+00:09:28.7020000		Dengue Fever casts Medica II on Angk H'zhet
+00:09:28.7020000		Dengue Fever casts Medica II on White Crystal
+00:09:28.7020000		Dengue Fever casts Medica II on Stone Wolf
+00:09:29.5880000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:09:29.5880000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:09:29.5880000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:09:29.5880000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:09:29.5880000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:09:29.5880000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:09:29.5880000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:09:29.5880000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:09:31.0080000		The limit break guage has been updated to 660. 3 bars are available
+00:09:34.0250000		The limit break guage has been updated to 880. 3 bars are available
+00:09:37.0010000		The limit break guage has been updated to 1100. 3 bars are available
+00:09:40.0220000		The limit break guage has been updated to 1320. 3 bars are available
+00:09:42.9940000		The limit break guage has been updated to 1540. 3 bars are available
+00:09:43.2620000		White Crystal casts Salted Earth on White Crystal
+00:09:44.1960000		Ramuh casts Judgment Volts on White Crystal
+00:09:44.1960000		Ramuh casts Judgment Volts on Super Negative
+00:09:44.1960000		Ramuh casts Judgment Volts on Moryn Ward
+00:09:44.1960000		Ramuh casts Judgment Volts on Stone Wolf
+00:09:44.1960000		Ramuh casts Judgment Volts on Angk H'zhet
+00:09:44.1960000		Ramuh casts Judgment Volts on Dengue Fever
+00:09:44.1960000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:09:44.1960000		Ramuh casts Judgment Volts on Blue Fever
+00:09:44.4630000		Dengue Fever casts Medica II on Dengue Fever
+00:09:44.4630000		Dengue Fever casts Medica II on Blue Fever
+00:09:44.4630000		Dengue Fever casts Medica II on Moryn Ward
+00:09:44.4630000		Dengue Fever casts Medica II on Cagnazzo Tarakona
+00:09:44.4630000		Dengue Fever casts Medica II on Super Negative
+00:09:44.4630000		Dengue Fever casts Medica II on Angk H'zhet
+00:09:44.4630000		Dengue Fever casts Medica II on White Crystal
+00:09:44.4630000		Dengue Fever casts Medica II on Stone Wolf
+00:09:46.0180000		The limit break guage has been updated to 1760. 3 bars are available
+00:09:46.2850000		Angk H'zhet casts Indomitability on Angk H'zhet
+00:09:46.2850000		Angk H'zhet casts Indomitability on White Crystal
+00:09:46.2850000		Angk H'zhet casts Indomitability on Moryn Ward
+00:09:46.2850000		Angk H'zhet casts Indomitability on Dengue Fever
+00:09:46.2850000		Angk H'zhet casts Indomitability on Stone Wolf
+00:09:46.2850000		Angk H'zhet casts Indomitability on Super Negative
+00:09:46.2850000		Angk H'zhet casts Indomitability on Blue Fever
+00:09:46.2850000		Angk H'zhet casts Indomitability on Cagnazzo Tarakona
+00:09:48.9900000		The limit break guage has been updated to 1980. 3 bars are available
+00:09:50.4120000		Dengue Fever casts Assize on Dengue Fever
+00:09:50.4120000		Dengue Fever casts Assize on Ramuh
+00:09:50.4120000		Dengue Fever casts Assize on Moryn Ward
+00:09:50.4120000		Dengue Fever casts Assize on Super Negative
+00:09:50.4120000		Dengue Fever casts Assize on Cagnazzo Tarakona
+00:09:50.4120000		Dengue Fever casts Assize on Blue Fever
+00:09:50.4120000		Dengue Fever casts Assize on Angk H'zhet
+00:09:50.4120000		Dengue Fever casts Assize on White Crystal
+00:09:50.4120000		Dengue Fever casts Assize on Stone Wolf
+00:09:51.0770000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:09:51.0770000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:09:51.0770000		Moryn Ward casts Dream Within A Dream on Ramuh
+00:09:52.0080000		The limit break guage has been updated to 2200. 3 bars are available
+00:09:52.7190000		Angk H'zhet casts Sacred Soil on Angk H'zhet
+00:09:53.8750000		Cagnazzo Tarakona casts Ley Lines on Cagnazzo Tarakona
+00:09:55.0280000		The limit break guage has been updated to 2420. 3 bars are available
+00:09:55.3850000		Ramuh casts Judgment Volts on Angk H'zhet
+00:09:55.3850000		Ramuh casts Judgment Volts on White Crystal
+00:09:55.3850000		Ramuh casts Judgment Volts on Super Negative
+00:09:55.3850000		Ramuh casts Judgment Volts on Moryn Ward
+00:09:55.3850000		Ramuh casts Judgment Volts on Stone Wolf
+00:09:55.3850000		Ramuh casts Judgment Volts on Dengue Fever
+00:09:55.3850000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:09:55.3850000		Ramuh casts Judgment Volts on Blue Fever
+00:09:56.4970000		Blue Fever casts Refulgent Arrow on Ramuh
+00:09:56.4970000		Blue Fever casts Refulgent Arrow on Ramuh
+00:09:56.4970000		Blue Fever casts Refulgent Arrow on Ramuh
+00:09:57.0740000		Dengue Fever casts Afflatus Rapture on Dengue Fever
+00:09:57.0740000		Dengue Fever casts Afflatus Rapture on Moryn Ward
+00:09:57.0740000		Dengue Fever casts Afflatus Rapture on Blue Fever
+00:09:57.0740000		Dengue Fever casts Afflatus Rapture on Cagnazzo Tarakona
+00:09:57.0740000		Dengue Fever casts Afflatus Rapture on Super Negative
+00:09:57.0740000		Dengue Fever casts Afflatus Rapture on Angk H'zhet
+00:09:57.0740000		Dengue Fever casts Afflatus Rapture on White Crystal
+00:09:57.0740000		Dengue Fever casts Afflatus Rapture on Stone Wolf
+00:09:58.0070000		The limit break guage has been updated to 2640. 3 bars are available
+00:09:59.3840000		Selene casts Fey Blessing on Angk H'zhet
+00:09:59.3840000		Selene casts Fey Blessing on White Crystal
+00:09:59.3840000		Selene casts Fey Blessing on Stone Wolf
+00:09:59.3840000		Selene casts Fey Blessing on Moryn Ward
+00:09:59.3840000		Selene casts Fey Blessing on Dengue Fever
+00:09:59.3840000		Selene casts Fey Blessing on Super Negative
+00:09:59.3840000		Selene casts Fey Blessing on Cagnazzo Tarakona
+00:09:59.3840000		Selene casts Fey Blessing on Blue Fever
+00:10:00.3190000		Dengue Fever casts Plenary Indulgence on Dengue Fever
+00:10:00.3190000		Dengue Fever casts Plenary Indulgence on Moryn Ward
+00:10:00.3190000		Dengue Fever casts Plenary Indulgence on Blue Fever
+00:10:00.3190000		Dengue Fever casts Plenary Indulgence on Cagnazzo Tarakona
+00:10:00.3190000		Dengue Fever casts Plenary Indulgence on Angk H'zhet
+00:10:00.3190000		Dengue Fever casts Plenary Indulgence on Super Negative
+00:10:00.3190000		Dengue Fever casts Plenary Indulgence on White Crystal
+00:10:00.3190000		Dengue Fever casts Plenary Indulgence on Stone Wolf
+00:10:01.0280000		The limit break guage has been updated to 2860. 3 bars are available
+00:10:04.0070000		Dengue Fever casts Medica on Dengue Fever
+00:10:04.0070000		Dengue Fever casts Medica on Blue Fever
+00:10:04.0070000		Dengue Fever casts Medica on Cagnazzo Tarakona
+00:10:04.0070000		Dengue Fever casts Medica on Moryn Ward
+00:10:04.0070000		Dengue Fever casts Medica on Angk H'zhet
+00:10:04.0070000		Dengue Fever casts Medica on Super Negative
+00:10:04.0070000		Dengue Fever casts Medica on White Crystal
+00:10:04.0070000		Dengue Fever casts Medica on Stone Wolf
+00:10:04.0070000		The limit break guage has been updated to 3080. 3 bars are available
+00:10:06.5370000		Ramuh casts Judgment Volts on Angk H'zhet
+00:10:06.5370000		Ramuh casts Judgment Volts on White Crystal
+00:10:06.5370000		Ramuh casts Judgment Volts on Super Negative
+00:10:06.5370000		Ramuh casts Judgment Volts on Stone Wolf
+00:10:06.5370000		Ramuh casts Judgment Volts on Moryn Ward
+00:10:06.5370000		Ramuh casts Judgment Volts on Dengue Fever
+00:10:06.5370000		Ramuh casts Judgment Volts on Cagnazzo Tarakona
+00:10:06.5370000		Ramuh casts Judgment Volts on Blue Fever
+00:10:07.0270000		The limit break guage has been updated to 3300. 3 bars are available
+00:10:10.0030000		The limit break guage has been updated to 3520. 3 bars are available
+00:10:10.3570000		The limit break guage has been updated to 3520. 2 bars are available

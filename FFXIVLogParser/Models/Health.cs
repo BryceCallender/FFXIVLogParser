@@ -20,5 +20,10 @@ namespace FFXIVLogParser.Models
         {
             return CurrentHP == other.CurrentHP && CurrentMP == other.CurrentMP;
         }
+
+        public static int operator -(Health a, Health b)
+        {
+            return (int)a.CurrentHP - (int)b.CurrentHP;
+        }
     }
 }

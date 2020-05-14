@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Highsoft.Highcharts" Version="8.0.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Network_20510_20200425.log">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

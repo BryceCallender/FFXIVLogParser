@@ -17,6 +17,10 @@ namespace FFXIVLogParser
             //string path = @"C:\Users\bryce\AppData\Roaming\Advanced Combat Tracker\FFXIVLogs\Network_20510_20200507.log";
             //string path = Console.ReadLine();
 
+            string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            string folderName = Path.Combine(projectPath, "Log Summaries");
+            DirectoryInfo summaryDirectory = Directory.CreateDirectory(folderName);
+
             if (!File.Exists(path))
             {
                 Console.WriteLine("File does not exist");
@@ -25,7 +29,7 @@ namespace FFXIVLogParser
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
 
-            Parser parser = new Parser();
+            Parser parser = new Parser(summaryDirectory, path);
 
             Console.Write("Parsing your report...");
             using (var progress = new ProgressBar())
@@ -48,8 +52,6 @@ namespace FFXIVLogParser
                 }
             }
 
-            Debug.WriteLine(parser.encounters.Count);
-
             Console.WriteLine("Done.");
 
             stopWatch.Stop();
@@ -61,6 +63,8 @@ namespace FFXIVLogParser
                 ts.Hours, ts.Minutes, ts.Seconds,
                 ts.Milliseconds / 10);
             Console.WriteLine("Elapsed time " + elapsedTime);
+
+            new HtmlGenerator(parser.encounterDirectoryInfo, parser.encounters);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -17,5 +18,21 @@ namespace FFXIVLogParser.Models.NetworkEvents
         public Position ActorPosition { get; set; } = new Position();
         public Health TargetHealth { get; set; } = new Health();
         public Position TargetPosition { get; set; } = new Position();
+
+
+        public string GetAbilityDamageInformation(uint value)
+        {
+            string damageContent = "";
+
+            BitArray bits = new BitArray(new int[] { Convert.ToInt32(value) });
+
+            if (bits.And(new BitArray(new int[] { 4 }))
+            {
+
+            }
+
+            return damageContent;
+        }
+
     }
 }

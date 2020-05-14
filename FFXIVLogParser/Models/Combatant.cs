@@ -25,6 +25,8 @@ namespace FFXIVLogParser.Models
         public DamageInfo DamageInformation { get; set; } = new DamageInfo();
         public HealingInfo HealingInformation { get; set; } = new HealingInfo();
 
+        public JobInfo JobInformation { get; set; }
+
         public Dictionary<uint, AbilityInfo> AbilityInfo { get; set; } = new Dictionary<uint, AbilityInfo>(); //Key is the skill id and the info is the data associated with it
 
         public bool Equals(Combatant other)
