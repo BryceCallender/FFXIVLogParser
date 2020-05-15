@@ -21,6 +21,8 @@ namespace FFXIVLogParser
 
         public DirectoryInfo encounterDirectoryInfo;
 
+        private bool firstAOELine;
+
         public Parser(DirectoryInfo summaryDirectoryInfo, string path)
         {
             encounters = new List<Encounter>();
@@ -39,6 +41,11 @@ namespace FFXIVLogParser
             string[] lineContents = line.Split('|');
 
             int.TryParse(lineContents[0], out int messageType);
+
+            if((LogMessageType)messageType != LogMessageType.NetworkAOEAbility)
+            {
+                firstAOELine = true;
+            }
 
             switch ((LogMessageType)messageType)
             {
@@ -71,6 +78,14 @@ namespace FFXIVLogParser
                     Combatant addCombatant = ReadCombatant(lineContents);
 
                     currentEncounter.combatants.Add(addCombatant);
+
+                    if(addCombatant.ID.ToString("X8").StartsWith("10"))
+                    {
+                        if(!currentEncounter.partyMemberIDs.Contains(addCombatant.ID))
+                        {
+                            currentEncounter.partyMemberIDs.Add(addCombatant.ID);
+                        }
+                    }
 
                     foreach (BossInfo boss in currentEncounter.bosses)
                     {
@@ -108,9 +123,16 @@ namespace FFXIVLogParser
 
                         int start = 3; //Start of first memeber and going to start + size
 
-                        for (int i = 0; i < size; i++)
+                        try
                         {
-                            currentEncounter.partyMemberIDs.Add(Convert.ToUInt32(lineContents[start + i], 16));
+                            for (int i = 0; i < size; i++)
+                            {
+                                currentEncounter.partyMemberIDs.Add(Convert.ToUInt32(lineContents[start + i], 16));
+                            }
+                        }
+                        catch(OverflowException ex)
+                        {
+                            Debug.WriteLine("Someone seemed to have disconnected!");
                         }
                     }
 
@@ -135,10 +157,21 @@ namespace FFXIVLogParser
                         currentEncounter.events.Add(new ReportEvent
                         {
                             EventTime = networkAbilityCast.Timestamp.TimeOfDay,
-                            EventDescription = $"{networkAbilityCast.ActorName} prepares {networkAbilityCast.SkillName} on {networkAbilityCast.TargetName}",
+                            EventDescription = $"{networkAbilityCast.ActorName} casts {networkAbilityCast.SkillName} on {networkAbilityCast.TargetName}",
                             EventType = EventType.Summary | EventType.DamageDone
                         });
                     }
+
+                    if (combatant != null)
+                    {
+                        if (!combatant.AbilityInfo.ContainsKey(networkAbilityCast.SkillName))
+                        {
+                            combatant.AbilityInfo.Add(networkAbilityCast.SkillName, new AbilityInfo());
+                        }
+
+                        combatant.AbilityInfo[networkAbilityCast.SkillName].CastAmount++;
+                    }
+
 
                     break;
                 case LogMessageType.NetworkAbility:
@@ -156,10 +189,17 @@ namespace FFXIVLogParser
                     //Itll be updated in the NetworkEffectResult since thats when the information is able to be deteced
                     if(combatant != null)
                     {
-                        if(combatant.AbilityInfo.ContainsKey(ability.SkillID))
+                        if (!combatant.AbilityInfo.ContainsKey(ability.SkillName))
                         {
-                            combatant.AbilityInfo.Add(ability.SkillID, new AbilityInfo());
+                            combatant.AbilityInfo.Add(ability.SkillName, new AbilityInfo());
                         }
+
+                        if(((LogMessageType)messageType == LogMessageType.NetworkAOEAbility && firstAOELine) || (LogMessageType)messageType == LogMessageType.NetworkAbility)
+                        {
+                            combatant.AbilityInfo[ability.SkillName].CastAmount++;
+                            firstAOELine = false;
+                        }
+                        
                     }
 
                     if (!currentEncounter.startedEncounter && bossInformation.Any(boss => boss.Name == ability.TargetName))
@@ -176,19 +216,12 @@ namespace FFXIVLogParser
                         currentEncounter.events.Add(new ReportEvent
                         {
                             EventTime = ability.Timestamp.Subtract(currentEncounter.startTime),
-                            EventDescription = $"{ability.ActorName} {ability.SkillName} {ability.TargetName} {ability.GetAbilityDamageInformation()}",
-                            EventType = EventType.Summary | EventType.DamageDone
+                            EventDescription = $"{ability.ActorName} prepares {ability.SkillName} on {ability.TargetName} {ability.GetAbilityDamageInformation()}",
+                            EventType = EventType.Summary | (ability.AbilityState == AbilityState.Damage? EventType.DamageDone : EventType.Healing)
                         });
+
+                        currentEncounter.abilities.Add(ability);
                     }
-                    //else if(currentEncounter.startedEncounter && combatant != null && combatant.Name == ability.TargetName)
-                    //{
-                    //    currentEncounter.events.Add(new ReportEvent
-                    //    {
-                    //        EventTime = ability.Timestamp.Subtract(currentEncounter.startTime),
-                    //        EventDescription = $"{ability.ActorName} casts {ability.SkillName} on {ability.TargetName}",
-                    //        EventType = EventType.Summary | EventType.DamageDone
-                    //    });
-                    //}
                     
                     break;
                 case LogMessageType.NetworkCancelAbility:
@@ -217,7 +250,7 @@ namespace FFXIVLogParser
                         currentEncounter.events.Add(new ReportEvent
                         {
                             EventTime = networkBuff.Timestamp.Subtract(currentEncounter.startTime),
-                            EventDescription = $"{networkBuff.TargetName} gains {networkBuff.SkillName}",
+                            EventDescription = $"{networkBuff.TargetName} gains {networkBuff.SkillName} from {networkBuff.ActorName}",
                             EventType = EventType.Summary
                         });
                     }
@@ -300,6 +333,50 @@ namespace FFXIVLogParser
                        
                     }
 
+                    if (currentEncounter.startedEncounter)
+                    {
+                        combatant = currentEncounter.GetCombatantFromID(result.ActorID);
+
+                        if (combatant != null)
+                        {
+                            int healthChange = combatant.Health - result.Health;
+
+                            combatant.Health.CurrentHP -= (uint)healthChange;
+
+                            NetworkAbility networkAbility = currentEncounter.abilities.Where(ability => ability.Damage == (uint)Math.Abs(healthChange)).FirstOrDefault(); 
+
+                            if(networkAbility != null)
+                            {
+                                currentEncounter.events.Add(new ReportEvent
+                                {
+                                    EventTime = result.Timestamp.Subtract(currentEncounter.startTime),
+                                    EventDescription = $"{networkAbility.ActorName} {networkAbility.SkillName} {networkAbility.TargetName} {networkAbility.Damage}",
+                                    EventType = EventType.Summary | (networkAbility.AbilityState == AbilityState.Damage ? EventType.DamageDone : EventType.Healing)
+                                });
+
+                                currentEncounter.abilities.Remove(networkAbility);
+
+                                Combatant caster = currentEncounter.GetCombatantFromID(networkAbility.ActorID);
+
+                                AbilityInfo abilityInfo = caster.AbilityInfo[networkAbility.SkillName];
+
+                                abilityInfo.HitCount++;
+
+                                if(networkAbility.AbilityState == AbilityState.Damage)
+                                {
+                                    abilityInfo.DamageInformation.TotalDamageDone += (uint)healthChange;
+                                    abilityInfo.DamageInformation.DPS = abilityInfo.DamageInformation.TotalDamageDone / (result.Timestamp.Subtract(currentEncounter.startTime).TotalSeconds);
+                                }
+                                else if(networkAbility.AbilityState == AbilityState.Healing)
+                                {
+                                    abilityInfo.HealingInformation.TotalHealingDone += (uint)Math.Abs(healthChange);
+                                    abilityInfo.HealingInformation.HPS = abilityInfo.HealingInformation.TotalHealingDone / (result.Timestamp.Subtract(currentEncounter.startTime).TotalSeconds);
+                                }
+                                
+                            }
+                        }
+                    }
+
                     break;
                 case LogMessageType.NetworkStatusList:
                     NetworkStatusList networkStatusList = ReadNetworkStatusList(lineContents);
@@ -314,23 +391,6 @@ namespace FFXIVLogParser
 
                             combatant.Health.CurrentHP -= (uint)healthChange;
 
-                            //if (combatant.abilityReportEvents.Count > 0)
-                            //{
-                            //    AbilityReportEvent reportEvent = combatant.abilityReportEvents.Dequeue();
-
-                            //    //Means we had some sort of value change
-                            //    //Negative means we healed otherwise damage taken
-                            //    if (healthChange > 0)
-                            //    {
-                            //        reportEvent.Event.EventType = EventType.Summary | EventType.DamageDone;
-                            //        reportEvent.Event.EventDescription += $" {healthChange}";
-                            //    }
-                            //    else if (healthChange < 0)
-                            //    {
-                            //        reportEvent.Event.EventType = EventType.Summary | EventType.Healing;
-                            //        reportEvent.Event.EventDescription += $" +{-healthChange}";
-                            //    }
-                            //}
                         }
                     }
 

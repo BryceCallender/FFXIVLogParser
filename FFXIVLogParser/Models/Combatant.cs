@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FFXIVLogParser.Models.NetworkEvents;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
@@ -27,7 +28,9 @@ namespace FFXIVLogParser.Models
 
         public JobInfo JobInformation { get; set; }
 
-        public Dictionary<uint, AbilityInfo> AbilityInfo { get; set; } = new Dictionary<uint, AbilityInfo>(); //Key is the skill id and the info is the data associated with it
+        public Dictionary<string, AbilityInfo> AbilityInfo { get; set; } = new Dictionary<string, AbilityInfo>(); //Key is the skill id and the info is the data associated with it
+
+        public List<NetworkBuff> CurrentBuffs { get; set; } = new List<NetworkBuff>();
 
         public bool Equals(Combatant other)
         {

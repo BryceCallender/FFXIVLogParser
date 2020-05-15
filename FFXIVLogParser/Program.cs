@@ -14,7 +14,7 @@ namespace FFXIVLogParser
 
             string path = "Network_20510_20200425.log";
             //string path = @"C:\Users\bryce\Desktop\FFXIVLogParser\FFXIVLogParser\Ramuh_Encounter_1.txt";
-            //string path = @"C:\Users\bryce\AppData\Roaming\Advanced Combat Tracker\FFXIVLogs\Network_20510_20200507.log";
+            //string path = @"C:\Users\bryce\AppData\Roaming\Advanced Combat Tracker\FFXIVLogs\Network_20510_20200513.log";
             //string path = Console.ReadLine();
 
             string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;

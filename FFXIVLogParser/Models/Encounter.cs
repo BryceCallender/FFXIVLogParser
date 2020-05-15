@@ -1,6 +1,7 @@
 ﻿using FFXIVLogParser.Models.NetworkEvents;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace FFXIVLogParser.Models
         public List<uint> partyMemberIDs; //Query combatant list to find the party members
 
         public List<NetworkAbilityCast> networkCastingAbilities;
+
+        public List<NetworkAbility> abilities;
 
         public List<ReportEvent> events; //Events Time and Description
 
@@ -42,6 +45,7 @@ namespace FFXIVLogParser.Models
             combatants = new List<Combatant>();
             partyMemberIDs = new List<uint>();
             networkCastingAbilities = new List<NetworkAbilityCast>();
+            abilities = new List<NetworkAbility>();
             startedEncounter = false;
             this.zoneName = zoneName;
             bosses = new List<BossInfo>();
@@ -114,7 +118,8 @@ namespace FFXIVLogParser.Models
             Encounter newEncounter = new Encounter(zoneName)
             {
                 partyMemberIDs = new List<uint>(partyMemberIDs),
-                combatants = new List<Combatant>(GetPartyCombatants())
+                combatants = new List<Combatant>(GetPartyCombatants()),
+                encounterNumber = ++encounterNumber
             };
 
             if (ZoneData.zoneInfo.ContainsKey(zoneName))

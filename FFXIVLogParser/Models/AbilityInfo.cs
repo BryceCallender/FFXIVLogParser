@@ -6,7 +6,6 @@ namespace FFXIVLogParser.Models
 {
     class AbilityInfo
     {
-        public uint DamageAmount { get; set; }
         public uint CastAmount { get; set; }
         public double AveragePerCast { get; set; }
         public uint HitCount { get; set; }
@@ -17,7 +16,6 @@ namespace FFXIVLogParser.Models
 
         public AbilityInfo()
         {
-            DamageAmount = 0;
             CastAmount = 0;
             AveragePerCast = 0;
             HitCount = 0;
